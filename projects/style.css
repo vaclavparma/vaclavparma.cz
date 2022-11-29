@@ -21,9 +21,16 @@ html{
     filter: blur(0);
 }
 
-.zpet_id{
+#zpet_id{
     color: #BCC8C6;
     text-decoration: none;
+    transition: 0.15s;
+}
+
+#zpet_id:hover{
+    color: #3185FC;
+    text-decoration: underline;
+    transition: 0.15s;
 }
 
 .menu{
@@ -51,7 +58,7 @@ html{
 }
 
 #projects{
-    margin-top: 8%;
+    margin-top: 10%;
 }
 
 .projects-box{
@@ -60,24 +67,6 @@ html{
     justify-content: space-around;
     margin-left: 15%;
     margin-right: 15%;
-}
-
-#projects_button{
-    background: rgb(9, 20, 31);
-    border-radius: 12px;
-    width: 200px;
-    height: 30px;
-    text-align: center;
-    color: #BCC8C6;
-    font-family: Arial;
-    font-size: 20;
-    font-weight: 400;
-    text-decoration: none;
-}
-
-#projects_button:hover{
-    transform: translateY(-30%);
-    transition: 0.4s;
 }
 
 .single-project{
@@ -89,6 +78,7 @@ html{
     margin-left: 2%;
     margin-right: 2%;
     margin-bottom: 5%;
+    transition: 0.4s;
 }
 
 .single-project img{
@@ -114,7 +104,7 @@ html{
 .single-project h2{
     font-family: Arial;
     font-weight: 400;
-    font-size: 18;
+    font-size: 14;
     color: #3185FC;
     margin-left: 5%;
     margin-top: 5%;
@@ -197,4 +187,34 @@ html{
     text-align: right;
     right: 0%;
     margin-right: 20%;
+}
+
+@media screen and (max-device-width: 800px) {
+    #menu{
+        height: 4%;
+    }
+
+    .menu nav a{
+        font-size: 30;
+    }
+
+    #language-button{
+        margin-left: 1%;
+    }
+    
+    .single-project{
+        flex-basis: 90%;
+    }
+
+    #made_by{
+        margin-top: 100%;
+    }
+
+    #made_by p{
+        font-size: 40;
+    }
+
+    #made_by a{
+        font-size: 28;
+    }
 }

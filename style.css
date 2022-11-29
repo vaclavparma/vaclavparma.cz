@@ -51,10 +51,12 @@ html{
     font-family: Arial;
     font-size: 20;
     font-weight: 600;
+    transition: 0.15s;
 }
 
 #language-button{
     margin-left: 50%;
+    transition: 0.15s;
 }
 
 #main_page_id{
@@ -64,6 +66,7 @@ html{
 }
 
 #start{
+    text-align: center;
     margin-top: 30px;
     scroll-margin-top: 150px;
 }
@@ -74,7 +77,6 @@ html{
     font-weight: 400;
     color: #fff;
     margin-top: 20%;
-    margin-left: 30%;
 }
 
 .start-main-text p{
@@ -83,11 +85,10 @@ html{
     font-weight: 400;
     color: #BCC8C6;
     margin-top: 10px;
-    margin-left: 40%;
 }
 
 #about{
-    margin-top: 40%;
+    margin-top: 45%;
     scroll-margin-top: 180px;
 }
 
@@ -149,7 +150,7 @@ html{
 }
 
 #projects{
-    margin-top: 30%;
+    margin-top: 35%;
     scroll-margin-top: 290px;
 }
 
@@ -172,6 +173,7 @@ html{
     font-size: 20;
     font-weight: 400;
     text-decoration: none;
+    transition: 0.4s;
 }
 
 #projects_button:hover{
@@ -188,6 +190,7 @@ html{
     margin-left: 2%;
     margin-right: 2%;
     margin-bottom: 5%;
+    transition: 0.4s;
 }
 
 .single-project img{
@@ -257,7 +260,7 @@ html{
 }
 
 #kontakt{
-    margin-top: 30%;
+    margin-top: 35%;
     scroll-margin-top: 150px;
 }
 
@@ -360,22 +363,30 @@ html{
     margin-right: 12%;
 }
 
-@media screen and (max-device-width: 800px) {
+@media screen and (max-device-width: 800px){
     #menu{
         height: 4%;
     }
 
-    .start-main-text h1{
-        margin-left: 15%;
+    .menu nav a{
+        font-size: 30;
+    }
+
+    #start{
+        margin-top: 50%;
     }
 
     .start-main-text p{
         font-size: 24;
-        margin-left: 20%;
     }
 
     #language-button{
         margin-left: 1%;
+    }
+
+    #about{
+        scroll-margin-top: 450px ;
+        margin-top: 150%;
     }
 
     .about-parent{
@@ -388,7 +399,42 @@ html{
     }
 
     #projects{
-        scroll-margin-top: 100px;
+        scroll-margin-top: 450px;
+        margin-top: 150%;
     }
     
+    .single-project{
+        flex-basis: 90%;
+    }
+
+    #projects_button{
+        font-size: 32;
+        width: 400px;
+        height: 50px;
+    }
+
+    #kontakt{
+        scroll-margin-top: 250px;
+        margin-top: 150%;
+    }
+
+    .kontakt{
+        margin-right: 1%;
+    }
+
+    #kontakt a{
+        font-size: 28;
+    }
+
+    #made_by{
+        margin-top: 100%;
+    }
+
+    #made_by p{
+        font-size: 40;
+    }
+
+    #made_by a{
+        font-size: 28;
+    }
 }
