@@ -120,7 +120,7 @@ html{
 }
 
 .about-main-text p{
-    font-family: Arial;
+    font-family: monospace;
     font-size: 20;
     font-weight: 400;
     color: #BCC8C6;
