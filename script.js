@@ -4,6 +4,7 @@ setInterval(() => {
     var diffDate = new Date(new Date() - startDate);
     my_age = (diffDate.toISOString().slice(0, 4) - 1970) + diffDate.getMonth()/12 + (diffDate.getDate()-1)/365 + diffDate.getHours()/8760 + diffDate.getMinutes()/525600 + diffDate.getSeconds()/31536000 + diffDate.getMilliseconds()/31536000000
     my_age = Math.round(my_age * 1000000000000) / 1000000000000
+    my_age = my_age.toFixed(12)
     var element = document.getElementById("age");
     element.textContent = my_age;
 }, 100)

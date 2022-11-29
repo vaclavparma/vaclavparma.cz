@@ -126,6 +126,10 @@ html{
     color: #BCC8C6;
 }
 
+.about-main-text p a{
+    font-family: monospace;
+}
+
 .about-list{
     margin-top: 7.5%;
     margin-left: 10%;
