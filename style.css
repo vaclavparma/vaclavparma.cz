@@ -8,6 +8,14 @@ html{
     background: #182937;
 }
 
+::-moz-selection {
+    background: #182937;
+}
+  
+::selection {
+    background: #182937;
+}
+
 .hidden{
     opacity: 0;
     filter: blur(4px);
