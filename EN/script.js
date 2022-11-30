@@ -27,7 +27,7 @@ function underline_menu(you_are_in){
     try{
         if (underlined_is_on){
         var element = document.getElementById(underlined_old);
-        element.style.color = "#BCC8C6";
+        element.style.color = "#dfe7e4";
         element.style.borderBottom = "2px solid transparent";}}
     catch{}
     try{
@@ -64,7 +64,7 @@ function menu_off(){
     underlined_is_on = false
     try{
     var element = document.getElementById(underlined);
-    element.style.color = "#BCC8C6";
+    element.style.color = "#dfe7e4";
     element.style.borderBottom = "2px solid transparent";}
     catch{}
 };
@@ -84,7 +84,7 @@ about_el.addEventListener('mouseover', function handleMouseOver() {
     about_el.style.color = "#3185FC"
 });
 about_el.addEventListener('mouseout', function handleMouseOut() {
-    about_el.style.color = "#BCC8C6"
+    about_el.style.color = "#dfe7e4"
     menu_on()
 });
 
@@ -95,7 +95,7 @@ projects_el.addEventListener('mouseover', function handleMouseOver() {
     projects_el.style.color = "#3185FC"
 });
 projects_el.addEventListener('mouseout', function handleMouseOut() {
-    projects_el.style.color = "#BCC8C6"
+    projects_el.style.color = "#dfe7e4"
     menu_on()
 });
 
@@ -106,6 +106,6 @@ kontakt_el.addEventListener('mouseover', function handleMouseOver() {
     kontakt_el.style.color = "#3185FC"
 });
 kontakt_el.addEventListener('mouseout', function handleMouseOut() {
-    kontakt_el.style.color = "#BCC8C6"
+    kontakt_el.style.color = "#dfe7e4"
     menu_on()
 });

@@ -9,11 +9,11 @@ html{
 }
 
 ::-moz-selection {
-    background: #182937;
+    background: #3046577a;
 }
   
 ::selection {
-    background: #182937;
+    background: #3046577a;
 }
 
 .hidden{

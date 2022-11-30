@@ -33,7 +33,7 @@ function underline_menu(you_are_in){
     try{
         if (underlined_is_on){
         var element = document.getElementById(underlined);
-        element.style.color = "#3185FC";
+        element.style.color = "#dfe7e4";
         element.style.borderBottom = "2px solid #3185FC";}}
     catch{}
     underlined_old = underlined
@@ -72,7 +72,7 @@ function menu_on(){
     underlined_is_on = true
     try{
     var element = document.getElementById(underlined);
-    element.style.color = "#3185FC";
+    element.style.color = "#dfe7e4";
     element.style.borderBottom = "2px solid #3185FC";}
     catch{}
 };
@@ -81,7 +81,7 @@ function menu_on(){
 const about_el = document.getElementById('about_id');
 about_el.addEventListener('mouseover', function handleMouseOver() {
     menu_off()
-    about_el.style.color = "#3185FC"
+    about_el.style.color = "#dfe7e4"
 });
 about_el.addEventListener('mouseout', function handleMouseOut() {
     about_el.style.color = "#BCC8C6"
@@ -92,7 +92,7 @@ about_el.addEventListener('mouseout', function handleMouseOut() {
 const projects_el = document.getElementById('projects_id');
 projects_el.addEventListener('mouseover', function handleMouseOver() {
     menu_off()
-    projects_el.style.color = "#3185FC"
+    projects_el.style.color = "#dfe7e4"
 });
 projects_el.addEventListener('mouseout', function handleMouseOut() {
     projects_el.style.color = "#BCC8C6"
@@ -103,7 +103,7 @@ projects_el.addEventListener('mouseout', function handleMouseOut() {
 const kontakt_el = document.getElementById('kontakt_id');
 kontakt_el.addEventListener('mouseover', function handleMouseOver() {
     menu_off()
-    kontakt_el.style.color = "#3185FC"
+    kontakt_el.style.color = "#dfe7e4"
 });
 kontakt_el.addEventListener('mouseout', function handleMouseOut() {
     kontakt_el.style.color = "#BCC8C6"
