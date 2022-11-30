@@ -9,24 +9,23 @@ html{
 }
 
 ::-moz-selection {
-    background: #182937;
+    background: #3046577a;
 }
   
 ::selection {
-    background: #182937;
+    background: #3046577a;
 }
 
-.hidden{
+.reveal{
+    position: relative;
+    transform: translateY(100px);
     opacity: 0;
-    filter: blur(4px);
-    transform: translateY(25%);
-    transition: 1s;
-}
-
-.show{
-    opacity: 1;
+    transition: 1s all ease;
+  }
+  
+.reveal.active{
     transform: translateY(0);
-    filter: blur(0);
+    opacity: 1;
 }
 
 .better-hover{
@@ -111,7 +110,6 @@ html{
     background: linear-gradient(#090A0F 0%, #182937 100%);
     overflow: hidden;
     text-align: center;
-    scroll-margin-top: 150px;
     margin-bottom: 35%;
 }
 
@@ -132,7 +130,7 @@ html{
 }
 
 #about{
-    scroll-margin-top: 180px;
+    scroll-margin-top: 200px;
 }
 
 .about-parent{
@@ -195,7 +193,7 @@ html{
 
 #projects{
     margin-top: 35%;
-    scroll-margin-top: 290px;
+    scroll-margin-top: 220px;
 }
 
 .projects-box{
@@ -300,7 +298,7 @@ html{
 
 #kontakt{
     margin-top: 35%;
-    scroll-margin-top: 150px;
+    scroll-margin-top: 210px;
 }
 
 .kontakt-main-text nav{
@@ -408,7 +406,7 @@ html{
     }
 
     .menu nav a{
-        font-size: 30;
+        font-size: 32;
     }
 
     #start{
@@ -424,12 +422,16 @@ html{
     }
 
     #about{
-        scroll-margin-top: 450px ;
+        scroll-margin-top: 250px ;
         margin-top: 100%;
     }
 
     .about-parent{
         display: contents;
+    }
+
+    .about-main-text nav{
+        margin-bottom: 5%;
     }
 
     .about-main-text{
@@ -446,7 +448,7 @@ html{
     }
 
     #projects{
-        scroll-margin-top: 450px;
+        scroll-margin-top: 250px;
         margin-top: 150%;
     }
     

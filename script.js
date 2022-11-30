@@ -39,19 +39,24 @@ function underline_menu(you_are_in){
     underlined_old = underlined
 }
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting){
-            underline_menu(entry.target.id)
-            entry.target.classList.add("show");
-        }
-        else{entry.target.classList.remove("show");}
-    });
-});
+function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+  
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 250;
+  
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+        underline_menu(reveals[i].id)
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
 
-
-const hiddenElements = document.querySelectorAll(".hidden");
-hiddenElements.forEach((el) => observer.observe(el));
+window.addEventListener("scroll", reveal);
 
 //Menu
 const el = document.getElementById('menu');
