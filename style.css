@@ -29,14 +29,54 @@ html{
     filter: blur(0);
 }
 
+.better-hover{
+    position: relative;
+    transition-duration: 300ms;
+    color: #BCC8C6;
+}
+
+.better-hover:hover{
+    color: #3185FC;
+}
+
+.better-hover:hover:before{
+    position: absolute;
+    content: "";
+    position: absolute;
+    width: 50%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 4px;
+    bottom: -2px;
+    border-bottom: 2px solid #3185FC;
+}
+
+.better-hover:before{
+    position: absolute;
+    content: "";
+    position: absolute;
+    width: 25%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 4px;
+    bottom: -5px;
+    border-bottom: 2px solid transparent;
+    transition-duration: 300ms;
+}
+
 .menu{
     position: fixed;
-    background: #1a2630;
+    background: #1a263000;
     z-index: 999999;
     width: 100%;
     height: 9%;
     top: 0;
     left: 0;
+    transition: 0.4s;
 }
 
 .menu nav{
@@ -45,18 +85,19 @@ html{
 }
 
 .menu nav a{
+    position: relative;
     text-decoration: none;
     color: #dfe7e4;
     margin: 20px 25px;
     font-family: Arial;
     font-size: 20;
     font-weight: 600;
-    transition: 0.15s;
+    transition: 0.3s;
 }
 
 #language-button{
+    text-decoration: none;
     margin-left: 50%;
-    transition: 0.15s;
 }
 
 #main_page_id{
@@ -66,9 +107,12 @@ html{
 }
 
 #start{
+    height: 100vh;
+    background: linear-gradient(#090A0F 0%, #182937 100%);
+    overflow: hidden;
     text-align: center;
-    margin-top: 30px;
     scroll-margin-top: 150px;
+    margin-bottom: 35%;
 }
 
 .start-main-text h1{
@@ -76,7 +120,7 @@ html{
     font-size: 100;
     font-weight: 400;
     color: #fff;
-    margin-top: 20%;
+    padding-top: 20%;
 }
 
 .start-main-text p{
@@ -88,12 +132,11 @@ html{
 }
 
 #about{
-    margin-top: 45%;
     scroll-margin-top: 180px;
 }
 
 .about-parent{
-    margin-left: 20%;
+    margin-left: 15%;
     margin-right: 20%;
     width: 60%;
     display: flex;
@@ -105,9 +148,9 @@ html{
 
 .about-main-text nav{
     display: block;
-    margin-bottom: 20px;
     font-family: Arial;
     font-weight: 600;
+    margin-bottom: 15%;
 }
 
 .about-main-text nav a{
@@ -125,6 +168,7 @@ html{
     font-size: 20;
     font-weight: 400;
     color: #BCC8C6;
+    margin-left: 20%;
 }
 
 .about-main-text p a{
@@ -132,7 +176,7 @@ html{
 }
 
 .about-list{
-    margin-top: 7.5%;
+    margin-top: 12.5%;
     margin-left: 10%;
     font-family: Arial;
 }
@@ -234,17 +278,12 @@ html{
 
 .single-project:hover{
     transform: translateY(-3%);
-    transition: 0.4s;
-}
-
-.single-project h2:hover{
-    text-decoration: underline;
 }
 
 #projects_text{
     display: block;
     margin-left: 15%;
-    margin-bottom: 3%;
+    margin-bottom: 5%;
     font-family: Arial;
     font-weight: 600;
 }
@@ -373,7 +412,7 @@ html{
     }
 
     #start{
-        margin-top: 50%;
+        padding-top: 50%;
     }
 
     .start-main-text p{
@@ -386,7 +425,7 @@ html{
 
     #about{
         scroll-margin-top: 450px ;
-        margin-top: 150%;
+        margin-top: 100%;
     }
 
     .about-parent{
@@ -394,8 +433,16 @@ html{
     }
 
     .about-main-text{
-        margin-left: 10%;
+        margin-left: 5%;
         margin-right: 10%;
+    }
+
+    .about-main-text nav h1{
+        padding-left: 12%;
+    }
+
+    .about-list{
+        padding-left: 10%;
     }
 
     #projects{

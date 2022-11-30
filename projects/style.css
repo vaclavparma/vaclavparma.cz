@@ -8,6 +8,14 @@ html{
     background: #182937;
 }
 
+::-moz-selection {
+    background: #182937;
+}
+  
+::selection {
+    background: #182937;
+}
+
 .hidden{
     opacity: 0;
     filter: blur(4px);
@@ -21,16 +29,43 @@ html{
     filter: blur(0);
 }
 
-#zpet_id{
+.better-hover{
+    position: relative;
+    transition-duration: 300ms;
     color: #BCC8C6;
-    text-decoration: none;
-    transition: 0.15s;
 }
 
-#zpet_id:hover{
+.better-hover:hover{
     color: #3185FC;
-    text-decoration: underline;
-    transition: 0.15s;
+}
+
+.better-hover:hover:before{
+    position: absolute;
+    content: "";
+    position: absolute;
+    width: 50%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 4px;
+    bottom: -2px;
+    border-bottom: 2px solid #3185FC;
+}
+
+.better-hover:before{
+    position: absolute;
+    content: "";
+    position: absolute;
+    width: 25%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 4px;
+    bottom: -5px;
+    border-bottom: 2px solid transparent;
+    transition-duration: 300ms;
 }
 
 .menu{
