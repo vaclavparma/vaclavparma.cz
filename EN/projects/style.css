@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+    background: #182937;
+}
+
+::-moz-selection {
+    background: #182937;
+}
+  
+::selection {
+    background: #182937;
+}
+
+.hidden{
+    opacity: 0;
+    filter: blur(4px);
+    transform: translateY(25%);
+    transition: 1s;
+}
+
+.show{
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+
+.better-hover{
+    position: relative;
+    transition-duration: 300ms;
+    color: #BCC8C6;
+}
+
+.better-hover:hover{
+    color: #3185FC;
+}
+
+.better-hover:hover:before{
+    position: absolute;
+    content: "";
+    position: absolute;
+    width: 50%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 4px;
+    bottom: -2px;
+    border-bottom: 2px solid #3185FC;
+}
+
+.better-hover:before{
+    position: absolute;
+    content: "";
+    position: absolute;
+    width: 25%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 4px;
+    bottom: -5px;
+    border-bottom: 2px solid transparent;
+    transition-duration: 300ms;
+}
+
+.menu{
+    position: fixed;
+    background: #1a2630;
+    z-index: 999999;
+    width: 100%;
+    height: 9%;
+    top: 0;
+    left: 0;
+}
+
+.menu nav{
+    margin-top: 1.3%;
+    margin-left: 8%;
+}
+
+.menu nav a{
+    text-decoration: none;
+    color: #dfe7e4;
+    margin: 20px 25px;
+    font-family: Arial;
+    font-size: 20;
+    font-weight: 600;
+}
+
+#projects{
+    margin-top: 10%;
+}
+
+.projects-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.single-project{
+    position: relative;
+    background: rgb(9, 20, 31);
+    text-align: center;
+    flex-basis: 45%;
+    border-radius: 16px;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 5%;
+    transition: 0.4s;
+}
+
+.single-project img{
+    width: 90%;
+    margin-top: 5%;
+}
+
+.single-project a{
+    text-decoration: none;
+}
+
+.single-project h1{
+    text-align: left;
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 28;
+    color: #fff;
+    margin-top: 3%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+
+.single-project h2{
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 14;
+    color: #3185FC;
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.single-project p{
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 20;
+    color: #BCC8C6;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+.single-project:hover{
+    transform: translateY(-3%);
+    transition: 0.4s;
+}
+
+.single-project h2:hover{
+    text-decoration: underline;
+}
+
+#projects_text{
+    display: block;
+    margin-left: 15%;
+    margin-bottom: 3%;
+    font-family: Arial;
+    font-weight: 600;
+}
+
+#projects_text a{
+    font-size: 40;
+    color: #fff;
+}
+
+#projects_text h1{
+    font-size: 46;
+    color: #3185FC;
+}
+
+#made_by{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30%;
+    width: 100%;
+    height: 25%;
+    bottom: 0;
+    left: 0;
+    background: rgb(9, 20, 31);
+}
+
+#made_by p{
+    font-family: Arial;
+    font-size: 35;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 40px;
+    margin-bottom: 12%;
+}
+
+#made_by a{
+    font-family: Arial;
+    font-size: 20;
+    font-weight: 400;
+    color: #BCC8C6;
+    margin-left: 30px;
+}
+
+.made_by_name{
+    position: absolute;
+    left: 0%;
+    margin-left: 15%;
+}
+
+.made_by_kontakt{
+    position: absolute;
+    text-align: right;
+    right: 0%;
+    margin-right: 20%;
+}
+
+@media screen and (max-device-width: 800px) {
+    #menu{
+        height: 4%;
+    }
+
+    .menu nav a{
+        font-size: 30;
+    }
+
+    #language-button{
+        margin-left: 1%;
+    }
+    
+    .single-project{
+        flex-basis: 90%;
+    }
+
+    #made_by{
+        margin-top: 100%;
+    }
+
+    #made_by p{
+        font-size: 40;
+    }
+
+    #made_by a{
+        font-size: 28;
+    }
+}
