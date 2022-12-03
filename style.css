@@ -75,7 +75,7 @@ div.OnClick{
     border-color: #FFFFFF;
     border-radius: 50%;
     animation: OnClick 0.4s ease-out;
-    z-index: 99999;
+    z-index: 9999999;
 }
 
 @keyframes OnClick{
