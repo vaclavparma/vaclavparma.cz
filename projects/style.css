@@ -185,11 +185,6 @@ div.OnClick{
 
 .single-project:hover{
     transform: translateY(-3%);
-    transition: 0.4s;
-}
-
-.single-project h2:hover{
-    text-decoration: underline;
 }
 
 #projects_text{
