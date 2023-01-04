@@ -10,20 +10,61 @@ setInterval(() => {
     element.textContent = my_age;
 }, 100);
 
+window.addEventListener(('load'), () => {
+    if (document.querySelector('#explosion1') !== null) {
+      window.sessionStorage.setItem('Explosion1', 'displayed');
+    }
+    if (document.querySelector('#explosion2') !== null) {
+        window.sessionStorage.setItem('Explosion2', 'displayed');
+    }
+    if (document.querySelector('#stars-main') !== null) {
+        window.sessionStorage.setItem('Stars-main', 'displayed');
+    }
+    if (document.querySelector('#menu') !== null) {
+        window.sessionStorage.setItem('Menu', 'displayed');
+    }
+    if (document.querySelector('#start-main-text') !== null) {
+        window.sessionStorage.setItem('Start', 'displayed');
+    }
+})
+
+function turn_animation_off(){
+    if (window.sessionStorage.getItem('Explosion1')) {
+        document.querySelector('#explosion1').classList.remove('explosion1')
+    }
+    if (window.sessionStorage.getItem('Explosion2')) {
+        document.querySelector('#explosion2').classList.remove('explosion2')
+    }
+    if (window.sessionStorage.getItem('Stars-main')) {
+        document.querySelector('#stars-main').classList.remove('stars-main')
+    }
+    if (window.sessionStorage.getItem('Menu')) {
+        document.querySelector('#menu').classList.remove('fade_in')
+    }
+    if (window.sessionStorage.getItem('Start')) {
+        document.querySelector('#start-main-text').classList.remove('fade_in')
+    }
+}
+
+const urlParams = new URLSearchParams(window.location.search);
+const animate = urlParams.get('animate')
+if (animate=="false"){turn_animation_off()}
+
 underlined_is_on = true
 underlined_old = "none"
 function underline_menu(you_are_in){
-    if(you_are_in == "start"){underlined = "main_page_id--off"}  //vypnuto
+    if(you_are_in == "start"){underlined = "main_page_id--off"} //vypnuto
     else if(you_are_in == "about"){underlined = "about_id"}
     else if (you_are_in == "projects"){underlined = "projects_id"}
     else if (you_are_in == "kontakt"){underlined = "kontakt_id"}
 
     if (underlined == "main_page_id--off"){
         var element = document.getElementById("menu");
-        element.style.background = "#1a263000"}
+        element.style.background = "#09182500";}
     else{
         var element = document.getElementById("menu");
-        element.style.background = "#1a2630"}
+        element.style.opacity = "1";
+        element.style.background = "#091825";}
 
     try{
         if (underlined_is_on){

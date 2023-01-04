@@ -7,34 +7,45 @@
         <link rel="shotcut icon" href="pictures/logo.png">
         <script defer src="script.js"></script>
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="stars.css">
+        <link rel="stylesheet" href="background.css">
     </head>
     <body>
-        <header class="menu" id="menu">
+        <header id="menu" class="fade_in">
             <nav>
                 <a id="main_page_id" href="#">{vp}</a>
                 <a id="about_id" class="better-hover" class="menu-item" href="#about">O mně</a>
                 <a id="projects_id" class="better-hover" class="menu-item" href="#projects">Projekty</a>
                 <a id="kontakt_id" class="better-hover" class="menu-item" href="#kontakt">Kontakt</a>
-                <a id="language-button" class="better-hover" href="EN/index.html">EN</a>
+                <a id="language-button" class="better-hover" href="EN/index.html?animate=false#">EN</a>
             </nav>
         </header>
 
+        <section id="main_background"> 
+            <div id="explosions">
+                <div id="explosion1" class="explosion1"></div>
+                <div id="explosion2" class="explosion2"></div>
+            </div>
+            <div id="stars-main" class="stars-main">
+                <div id="stars"></div>
+                <div id="stars2"></div>
+                <div id="stars3"></div>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </section>
+
         <section id="start" class="reveal active">
-            <div id="stars"></div>
-            <div id="stars2"></div>
-            <div id="stars3"></div>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <div class="start-main-text">
-                <h1>Václav Parma</h1>
-                <p>Student, programátor a maker</p>
+            <div id="centered">
+                <div id="start-main-text" class="fade_in">
+                    <h1>Václav Parma</h1>
+                    <p>Student, programátor a maker</p>
+                </div>
             </div>
         </section>
 
@@ -84,10 +95,10 @@
         </section>
 
         <section id="kontakt" class="reveal">
-            <di class="kontakt-main-text">
+            <di id="kontakt-main-text">
                 <nav><h1>[<a>Kontakt</a>]</h1></nav>
             </di>
-            <di class="kontakt">
+            <di id="kontakts">
                 <nav id="kontakt_mail">
                     <a href="mailto: kontakt@vaclavparma.cz" target="_blank"><svg width="24" heigh="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#fff" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg></a>
                     <a href="mailto: kontakt@vaclavparma.cz" target="_blank">kontakt@vaclavparma.cz</a>

@@ -5,7 +5,7 @@
 
 html{
     scroll-behavior: smooth;
-    background: #182937;
+    background: #091b2a;
     touch-action: manipulation;
 }
 
@@ -19,7 +19,7 @@ html{
 
 .reveal{
     position: relative;
-    transform: translateY(100px);
+    transform: translateY(60px);
     opacity: 0;
     transition: 1s all ease;
   }
@@ -32,7 +32,7 @@ html{
 .better-hover{
     position: relative;
     transition-duration: 300ms;
-    color: #BCC8C6;
+    color: #fcfcfc;
 }
 
 .better-hover:hover{
@@ -95,9 +95,9 @@ div.OnClick{
     }
 }
 
-.menu{
+#menu{
     position: fixed;
-    background: #1a263000;
+    background: #09182500;
     z-index: 999999;
     width: 100%;
     height: 9%;
@@ -106,28 +106,30 @@ div.OnClick{
     transition: 0.4s;
 }
 
-.menu nav{
+#menu nav{
     margin-top: 0.8%;
     margin-left: 10%;
 }
 
-.menu nav a{
+#menu nav a{
     position: relative;
     text-decoration: none;
-    color: #dfe7e4;
+    color: #fcfcfc;
     margin: 20px 25px;
     font-family: Arial;
-    font-size: 20;
+    font-size: 24;
     font-weight: 600;
     transition: 0.3s;
 }
 
-#language-button{
+#menu #language-button{
     text-decoration: none;
     margin-left: 50%;
 }
 
-#main_page_id{
+#menu #language-button:hover{color: #3185FC;}
+
+#menu #main_page_id{
     font-size: 32;
     font-weight: 400;
     color: #3185FC;
@@ -135,31 +137,55 @@ div.OnClick{
 
 #start{
     scroll-margin-top: 100px;
-    height: 100vh;
-    background: linear-gradient(#090A0F 0%, #182937 100%);
-    overflow: hidden;
     text-align: center;
-    margin-bottom: 20%;
+    padding-bottom: 70vh;
 }
 
-.start-main-text h1{
+#centered{
+    display: flex;
+}
+
+#start-main-text{
+    position: absolute;
+    padding-top: 40vh;
+    padding-left: 30%;
+}
+
+#start-main-text h1{
     font-family: Arial;
     font-size: 100;
     font-weight: 400;
     color: #fff;
-    padding-top: 20%;
 }
 
-.start-main-text p{
+#start-main-text p{
     font-family: Arial;
     font-size: 20;
     font-weight: 400;
-    color: #BCC8C6;
+    color: #fcfcfc;
     margin-top: 10px;
+}
+
+.fade_in {
+    opacity: 0;
+    animation: 2.5s fadeIn;
+    animation-delay: 6.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+      }
+    to {
+        opacity: 1;
+      }
 }
 
 #about{
     scroll-margin-top: 200px;
+    margin-top: 60vh;
 }
 
 .about-parent{
@@ -194,7 +220,7 @@ div.OnClick{
     font-family: Arial;
     font-size: 20;
     font-weight: 400;
-    color: #BCC8C6;
+    color: #fcfcfc;
     margin-left: 20%;
 }
 
@@ -217,11 +243,11 @@ div.OnClick{
 .about-list a{
     font-size: 20;
     font-weight: 400;
-    color: #BCC8C6;
+    color: #fcfcfc;
 }
 
 #projects{
-    margin-top: 20%;
+    margin-top: 25%;
     scroll-margin-top: 220px;
 }
 
@@ -234,12 +260,12 @@ div.OnClick{
 }
 
 #projects_button{
-    background: rgb(9, 20, 31);
+    background: rgb(7, 15, 23);
     border-radius: 12px;
     width: 200px;
     height: 30px;
     text-align: center;
-    color: #BCC8C6;
+    color: #fcfcfc;
     font-family: Arial;
     font-size: 20;
     font-weight: 400;
@@ -254,7 +280,7 @@ div.OnClick{
 
 .single-project{
     position: relative;
-    background: rgb(9, 20, 31);
+    background: rgb(7, 15, 23);
     text-align: center;
     flex-basis: 45%;
     border-radius: 16px;
@@ -298,7 +324,7 @@ div.OnClick{
     font-family: Arial;
     font-weight: 400;
     font-size: 20;
-    color: #BCC8C6;
+    color: #fcfcfc;
     margin-left: 8%;
     margin-right: 8%;
 }
@@ -326,11 +352,11 @@ div.OnClick{
 }
 
 #kontakt{
-    margin-top: 15%;
+    margin-top: 25%;
     scroll-margin-top: 210px;
 }
 
-.kontakt-main-text nav{
+#kontakt-main-text nav{
     display: block;
     margin-left: 15%;
     margin-bottom: 20px;
@@ -338,25 +364,25 @@ div.OnClick{
     font-weight: 600;
 }
 
-.kontakt-main-text nav a{
+#kontakt-main-text nav a{
     font-size: 40;
     color: #fff;
 }
 
-.kontakt-main-text nav h1{
+#kontakt-main-text nav h1{
     font-size: 46;
     color: #3185FC;
 }
 
-.kontakt{
+#kontakts{
     display: flex;
     flex-wrap: wrap;
     margin-left: 20%;
     margin-right: 20%;
 }
 
-.kontakt a{
-    color: #BCC8C6;
+#kontakts a{
+    color: #fcfcfc;
     text-decoration: none;
     font-family: Arial;
     font-size: 20;
@@ -384,15 +410,14 @@ div.OnClick{
 }
 
 #made_by{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    position: relative;
+    z-index: 1;
     margin-top: 30%;
     width: 100%;
     height: 25%;
     bottom: 0;
     left: 0;
-    background: rgb(9, 20, 31);
+    background-color: rgb(7, 15, 23);
 }
 
 #made_by p{
@@ -408,7 +433,7 @@ div.OnClick{
     font-family: Arial;
     font-size: 20;
     font-weight: 400;
-    color: #BCC8C6;
+    color: #fcfcfc;
     margin-left: 30px;
 }
 
@@ -451,31 +476,41 @@ div.OnClick{
         height: 4%;
     }
 
-    .menu nav a{
-        font-size: 32;
+    #menu nav{
+        margin-left: 2%;
+    }
+
+    #menu nav a{
+        font-size: 28;
     }
 
     .reveal.active{
-        transform: translateY(-200px);
+        transform: translateY(-100px);
     }
 
     #start{
         transform: translateY(0);
         padding-top: 50%;
         height: 70vh;
-        margin-bottom: 100%;
+        padding-bottom: 1%;
     }
 
-    .start-main-text p{
+    #start-main-text{
+        padding-top: 12vh;
+        padding-left: 12vw;
+    }
+
+    #start-main-text p{
         font-size: 24;
     }
 
-    #language-button{
+    #menu #language-button{
         margin-left: 1%;
     }
 
     #about{
         scroll-margin-top: 450px ;
+        margin-top: 25vh;
     }
 
     .about-parent{
@@ -483,7 +518,7 @@ div.OnClick{
     }
 
     .about-main-text nav{
-        margin-bottom: 5%;
+        margin-bottom: 3%;
     }
 
     .about-main-text{
@@ -491,12 +526,29 @@ div.OnClick{
         margin-right: 10%;
     }
 
+    .about-main-text nav a{
+        font-size: 50;
+    }
+
     .about-main-text nav h1{
         padding-left: 12%;
+        font-size: 58;
+    }
+
+    .about-main-text p{
+        font-size: 35;
     }
 
     .about-list{
         padding-left: 10%;
+    }
+
+    .about-list h1{
+        font-size: 40;
+    }
+
+    .about-list a{
+        font-size: 35;
     }
 
     #projects{
@@ -506,6 +558,26 @@ div.OnClick{
     
     .single-project{
         flex-basis: 90%;
+    }
+
+    .single-project h1{
+        font-size: 32;
+    }
+    
+    .single-project h2{
+        font-size: 18;
+    }
+    
+    .single-project p{
+        font-size: 26;
+    }
+
+    #projects_text a{
+        font-size: 50;
+    }
+    
+    #projects_text h1{
+        font-size: 58;
     }
 
     #projects_button{
@@ -519,12 +591,29 @@ div.OnClick{
         margin-top: 75%;
     }
 
-    .kontakt{
+    #kontakt-main-text{
+        margin-left: 10%;
+    }
+
+    #kontakt-main-text nav a{
+        font-size: 50;
+    }
+    
+    #kontakt-main-text nav h1{
+        font-size: 58;
+    }
+
+    #kontakts{
+        margin-left: 20%;
         margin-right: 1%;
     }
 
-    #kontakt a{
-        font-size: 28;
+    #kontakts a{
+        font-size: 30;
+    }
+
+    #kontakt_mail{
+        margin-right: 30%;
     }
 
     #made_by{
