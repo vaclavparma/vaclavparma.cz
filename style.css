@@ -138,6 +138,7 @@ div.OnClick{
 #start{
     scroll-margin-top: 100px;
     text-align: center;
+    
     padding-bottom: 70vh;
 }
 
@@ -146,9 +147,8 @@ div.OnClick{
 }
 
 #start-main-text{
-    position: absolute;
+    width: 100%;
     padding-top: 40vh;
-    padding-left: 30%;
 }
 
 #start-main-text h1{
@@ -496,8 +496,7 @@ div.OnClick{
     }
 
     #start-main-text{
-        padding-top: 12vh;
-        padding-left: 12vw;
+        padding-top: 15vh;
     }
 
     #start-main-text p{
