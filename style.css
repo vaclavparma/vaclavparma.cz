@@ -185,7 +185,7 @@ div.OnClick{
 
 #about{
     scroll-margin-top: 200px;
-    margin-top: 60vh;
+    margin-top: 10vh;
 }
 
 .about-parent{
@@ -500,7 +500,7 @@ div.OnClick{
     }
 
     #start-main-text p{
-        font-size: 24;
+        font-size: 32;
     }
 
     #menu #language-button{
@@ -535,7 +535,7 @@ div.OnClick{
     }
 
     .about-main-text p{
-        font-size: 35;
+        font-size: 32;
     }
 
     .about-list{
@@ -547,7 +547,7 @@ div.OnClick{
     }
 
     .about-list a{
-        font-size: 35;
+        font-size: 32;
     }
 
     #projects{
