@@ -1,5 +1,5 @@
 setInterval(() => {
-  const date_fix = 0.00262377367100159707962582705909;
+  const date_fix = 0.002819741;
   var startDate = new Date("2006/02/08");
   var diffDate = new Date(new Date() - startDate);
   my_age =
