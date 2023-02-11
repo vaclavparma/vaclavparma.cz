@@ -1,129 +1,243 @@
 <html>
-    <head>
-        <title>Václav Parma</title>
-        <meta name="author" content="Václav Parma"/>
-        <meta name="description" content="Hello, I'm student, programmer and maker from Czech republic. I study at the grammar school in Louny. I learned my knowledge of programming and electronics mostly by trial and error. Most often I program, but I'm also interested in 3D printing, computers and various electronic projects."/>
-        
-        <link rel="shotcut icon" href="../pictures/logo.png">
-        <script defer src="../script.js"></script>
-        <link rel="stylesheet" href="../style.css">
-        <link rel="stylesheet" href="../background.css">
-    </head>
-    <body>
-        <header id="menu" class="fade_in">
-            <nav>
-                <a id="main_page_id" href="#">{vp}</a>
-                <a id="about_id" class="better-hover" class="menu-item" href="#about">About me</a>
-                <a id="projects_id" class="better-hover" class="menu-item" href="#projects">Projects</a>
-                <a id="kontakt_id" class="better-hover" class="menu-item" href="#kontakt">Contact</a>
-                <a id="language-button" class="better-hover" href="../index.html?animate=false#">CS</a>
-            </nav>
-        </header>
+  <head>
+    <title>Václav Parma</title>
+    <meta name="author" content="Václav Parma" />
+    <meta
+      name="description"
+      content="Hello, I'm student, programmer and maker from Czech republic. I study at the grammar school in Louny. I learned my knowledge of programming and electronics mostly by trial and error. Most often I program, but I'm also interested in 3D printing, computers and various electronic projects." />
 
-        <section id="main_background"> 
-            <div id="explosions">
-                <div id="explosion1" class="explosion1"></div>
-                <div id="explosion2" class="explosion2"></div>
-            </div>
-            <div id="stars-main" class="stars-main">
-                <div id="stars"></div>
-                <div id="stars2"></div>
-                <div id="stars3"></div>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </section>
+    <link rel="shotcut icon" href="../pictures/logo.png" />
+    <script defer src="../script.js"></script>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../background.css" />
+  </head>
+  <body>
+    <header id="menu" class="fade_in">
+      <nav>
+        <a id="main_page_id" href="#">{vp}</a>
+        <a id="about_id" class="better-hover" class="menu-item" href="#about"
+          >About me</a
+        >
+        <a
+          id="projects_id"
+          class="better-hover"
+          class="menu-item"
+          href="#projects"
+          >Projects</a
+        >
+        <a
+          id="kontakt_id"
+          class="better-hover"
+          class="menu-item"
+          href="#kontakt"
+          >Contact</a
+        >
+        <a
+          id="language-button"
+          class="better-hover"
+          href="../index.html?animate=false#"
+          >CS</a
+        >
+      </nav>
+    </header>
 
-        <section id="start" class="reveal active">
-            <div id="centered">
-                <div id="start-main-text" class="fade_in">
-                    <h1>Václav Parma</h1>
-                    <p>Student, programmer and maker</p>
-                </div>
-            </div>
-        </section>
+    <section id="main_background">
+      <div id="explosions">
+        <div id="explosion1" class="explosion1"></div>
+        <div id="explosion2" class="explosion2"></div>
+      </div>
+      <div id="stars-main" class="stars-main">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </section>
 
-        <section id="about" class="reveal">
-            <div class="about-parent">
-                <div class="about-main-text">
-                    <nav><h1>[<a>About me</a>]</h1></nav>
-                    <p>Hello, I'm <a id="age">{years}</a> years old student, programmer and maker from Czech republic. I study at the grammar school in Louny.</p>
-                    <p>I learned my knowledge of programming and electronics mostly by trial and error.</p>
-                    <p>Most often I program, but I'm also interested in 3D printing, computers and various electronic projects.</p>
-                </div>
-                <nav class="about-list">         
-                    <h1>- <a>Python</a></h1>
-                    <h1>- <a>JavaScript</a></h1>
-                    <h1>- <a>HTML</a></h1>
-                    <h1>- <a>CSS</a></h1>
-                    <h1>- <a>C++</a></h1>
-                </nav>
-                <nav class="about-list">
-                    <h1>- <a>Visual Studio Code</a></h1>
-                    <h1>- <a>Fusion 360</a></h1>
-                    <h1>- <a>PrusaSlicer</a></h1>
-                    <h1>- <a>EasyEDA</a></h1>
-                </nav>
-            </div>
-        </section>
+    <section id="start" class="reveal active">
+      <div id="centered">
+        <div id="start-main-text" class="fade_in">
+          <h1>Václav Parma</h1>
+          <p>Student, programmer and maker</p>
+        </div>
+      </div>
+    </section>
 
-        <section id="projects" class="reveal">
-            <nav id="projects_text"><h1>[<a>Projects</a>]</h1></nav>
-            <div class="projects-box">
-                <a href="https://github.com/Venca321/vaclavparma.cz" target="_blank"><div class="single-project">
-                    <img src="../pictures/website.png"> <!-- obrázky 800x400px -->
-                    <h1>This website</h1>
-                    <p>Created in 2022</p>
-                    <a href="https://github.com/Venca321/vaclavparma.cz" target="_blank"><h2 class="better-hover">github.com/Venca321/vaclavparma.cz</h2></a> <!-- Odkaz (jen nápis, odkaz má celý blok) --> 
-                </div></a>
-                <a><div class="single-project" style="display: block;">
-                    <img src="../pictures/voiceAssistant.png">
-                    <h1>Voice assistant</h1>
-                    <p>Voice assistant MIA</p>
-                    <p>Created in 2022 using python</p>
-                    <a><h2 class="better-hover"></h2></a>
-                </div></a>
-                <a id="projects_button" href="projects/projects.html#">Other projects</a>
-            </div>
-        </section>
+    <section id="about" class="reveal">
+      <div class="about-parent">
+        <div class="about-main-text">
+          <nav>
+            <h1>[<a>About me</a>]</h1>
+          </nav>
+          <p>
+            Hello, I'm <a id="age">{years}</a> years old student, programmer and
+            maker from Czech republic. I study at the grammar school in Louny.
+          </p>
+          <p>
+            I learned my knowledge of programming and electronics mostly by
+            trial and error.
+          </p>
+          <p>
+            Most often I program, but I'm also interested in 3D printing,
+            computers and various electronic projects.
+          </p>
+        </div>
+        <nav class="about-list">
+          <h1>- <a>Python</a></h1>
+          <h1>- <a>JavaScript</a></h1>
+          <h1>- <a>HTML</a></h1>
+          <h1>- <a>CSS</a></h1>
+          <h1>- <a>C++</a></h1>
+        </nav>
+        <nav class="about-list">
+          <h1>- <a>Visual Studio Code</a></h1>
+          <h1>- <a>Github</a></h1>
+          <h1>- <a>Git</a></h1>
+          <h1>- <a>Fusion 360</a></h1>
+          <h1>- <a>PrusaSlicer</a></h1>
+        </nav>
+      </div>
+    </section>
 
-        <section id="kontakt" class="reveal">
-            <di id="kontakt-main-text">
-                <nav><h1>[<a>Contact</a>]</h1></nav>
-            </di>
-            <di id="kontakts">
-                <nav id="kontakt_mail">
-                    <a href="mailto: kontakt@vaclavparma.cz" target="_blank"><svg width="24" heigh="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#fff" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg></a>
-                    <a href="mailto: kontakt@vaclavparma.cz" target="_blank">contact@vaclavparma.cz</a>
-                </nav>
-                <nav id="kontakt_mess">
-                    <a href="https://msng.link/o/?vaclav.parma=fm" target="_blank"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" fill="#fff"><path d="M12 0c-6.627 0-12 4.975-12 11.111 0 3.497 1.745 6.616 4.472 8.652v4.237l4.086-2.242c1.09.301 2.246.464 3.442.464 6.627 0 12-4.974 12-11.111 0-6.136-5.373-11.111-12-11.111zm1.193 14.963l-3.056-3.259-5.963 3.259 6.559-6.963 3.13 3.259 5.889-3.259-6.559 6.963z"/></svg></a>
-                    <a href="https://msng.link/o/?vaclav.parma=fm" target="_blank">Messenger</a>
-                </nav>
-                <nav id="kontakt_github">
-                    <a href="https://github.com/Venca321" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-                    <a href="https://github.com/Venca321" target="_blank">Github</a>
-                </nav>
-            </di>
-        </section>
+    <section id="projects" class="reveal">
+      <nav id="projects_text"><h1>[<a>Projects</a>]</h1></nav>
+      <div class="projects-box">
+        <a href="https://github.com/Venca321/vaclavparma.cz" target="_blank"
+          ><div class="single-project">
+            <img src="../pictures/website.png" />
+            <!-- obrázky 800x400px -->
+            <h1>This website</h1>
+            <p>Created in 2022</p>
+            <a href="https://github.com/Venca321/vaclavparma.cz" target="_blank"
+              ><h2 class="better-hover">
+                github.com/Venca321/vaclavparma.cz
+              </h2></a
+            >
+            <!-- Odkaz (jen nápis, odkaz má celý blok) -->
+          </div></a
+        >
+        <a
+          ><div class="single-project" style="display: block">
+            <img src="../pictures/voiceAssistant.png" />
+            <h1>Voice assistant</h1>
+            <p>Voice assistant MIA</p>
+            <p>Created in 2022 using python</p>
+            <a><h2 class="better-hover"></h2></a></div
+        ></a>
+        <a id="projects_button" href="projects/projects.html#"
+          >Other projects</a
+        >
+      </div>
+    </section>
 
-        <section id="made_by">
-            <nav class="made_by_name">
-                <p>Václav Parma</p>
-                <a>Created in Louny</a>
-            </nav>
-            <nav class="made_by_kontakt">
-                <p>Contact</p>
-                <a href="mailto: kontakt@vaclavparma.cz" target="_blank"><svg width="24" heigh="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#fff" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg></a>
-                <a href="https://msng.link/o/?vaclav.parma=fm" target="_blank"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" fill="#fff"><path d="M12 0c-6.627 0-12 4.975-12 11.111 0 3.497 1.745 6.616 4.472 8.652v4.237l4.086-2.242c1.09.301 2.246.464 3.442.464 6.627 0 12-4.974 12-11.111 0-6.136-5.373-11.111-12-11.111zm1.193 14.963l-3.056-3.259-5.963 3.259 6.559-6.963 3.13 3.259 5.889-3.259-6.559 6.963z"/></svg></a>
-                <a href="https://github.com/Venca321" target="_blank"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-            </nav>
-        </section>
-    </body>
+    <section id="kontakt" class="reveal">
+      <di id="kontakt-main-text">
+        <nav><h1>[<a>Contact</a>]</h1></nav>
+      </di>
+      <di id="kontakts">
+        <nav id="kontakt_mail">
+          <a href="mailto: kontakt@vaclavparma.cz" target="_blank"
+            ><svg
+              width="24"
+              heigh="24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="{1.5}"
+              stroke="#fff"
+              className="w-6 h-6">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg
+          ></a>
+          <a href="mailto: kontakt@vaclavparma.cz" target="_blank"
+            >contact@vaclavparma.cz</a
+          >
+        </nav>
+        <nav id="kontakt_mess">
+          <a href="https://msng.link/o/?vaclav.parma=fm" target="_blank"
+            ><svg
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              fill="#fff">
+              <path
+                d="M12 0c-6.627 0-12 4.975-12 11.111 0 3.497 1.745 6.616 4.472 8.652v4.237l4.086-2.242c1.09.301 2.246.464 3.442.464 6.627 0 12-4.974 12-11.111 0-6.136-5.373-11.111-12-11.111zm1.193 14.963l-3.056-3.259-5.963 3.259 6.559-6.963 3.13 3.259 5.889-3.259-6.559 6.963z" /></svg
+          ></a>
+          <a href="https://msng.link/o/?vaclav.parma=fm" target="_blank"
+            >Messenger</a
+          >
+        </nav>
+        <nav id="kontakt_github">
+          <a href="https://github.com/Venca321" target="_blank"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="#fff">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" /></svg
+          ></a>
+          <a href="https://github.com/Venca321" target="_blank">Github</a>
+        </nav>
+      </di>
+    </section>
+
+    <section id="made_by">
+      <nav class="made_by_name">
+        <p>Václav Parma</p>
+        <a>Created in Louny</a>
+      </nav>
+      <nav class="made_by_kontakt">
+        <p>Contact</p>
+        <a href="mailto: kontakt@vaclavparma.cz" target="_blank"
+          ><svg
+            width="24"
+            heigh="24"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="{1.5}"
+            stroke="#fff"
+            className="w-6 h-6">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg
+        ></a>
+        <a href="https://msng.link/o/?vaclav.parma=fm" target="_blank"
+          ><svg
+            width="24"
+            height="24"
+            xmlns="http://www.w3.org/2000/svg"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            fill="#fff">
+            <path
+              d="M12 0c-6.627 0-12 4.975-12 11.111 0 3.497 1.745 6.616 4.472 8.652v4.237l4.086-2.242c1.09.301 2.246.464 3.442.464 6.627 0 12-4.974 12-11.111 0-6.136-5.373-11.111-12-11.111zm1.193 14.963l-3.056-3.259-5.963 3.259 6.559-6.963 3.13 3.259 5.889-3.259-6.559 6.963z" /></svg
+        ></a>
+        <a href="https://github.com/Venca321" target="_blank"
+          ><svg
+            width="24"
+            height="24"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="#fff">
+            <path
+              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" /></svg
+        ></a>
+      </nav>
+    </section>
+  </body>
 </html>
