@@ -122,9 +122,11 @@ div.OnClick{
     transition: 0.3s;
 }
 
+
+
 #menu #language-button{
     text-decoration: none;
-    margin-left: 50%;
+    margin-left: 40vw;
 }
 
 #menu #language-button:hover{color: #3185FC;}
@@ -164,23 +166,6 @@ div.OnClick{
     font-weight: 400;
     color: #fcfcfc;
     margin-top: 10px;
-}
-
-.fade_in {
-    opacity: 0;
-    animation: 2.5s fadeIn;
-    animation-delay: 6.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards; 
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-      }
-    to {
-        opacity: 1;
-      }
 }
 
 #about{
@@ -364,14 +349,14 @@ div.OnClick{
     font-weight: 600;
 }
 
-#kontakt-main-text nav a{
-    font-size: 40;
-    color: #fff;
-}
-
 #kontakt-main-text nav h1{
     font-size: 46;
     color: #3185FC;
+}
+
+#kontakt-main-text nav a{
+    font-size: 40;
+    color: #fff;
 }
 
 #kontakts{
@@ -379,6 +364,10 @@ div.OnClick{
     flex-wrap: wrap;
     margin-left: 20%;
     margin-right: 20%;
+}
+
+#kontakts nav a svg{
+    translate: 0px 4px;
 }
 
 #kontakts a{
