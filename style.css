@@ -468,7 +468,7 @@ div.OnClick{
     }
 
     #menu nav a{
-        font-size: 28;
+        font-size: 28px;
     }
 
     .reveal.active{
@@ -486,8 +486,12 @@ div.OnClick{
         padding-top: 15vh;
     }
 
+    #start-main-text h1{
+        font-size: 110px;
+    }
+
     #start-main-text p{
-        font-size: 32;
+        font-size: 40px;
     }
 
     #menu #language-button{
@@ -514,16 +518,16 @@ div.OnClick{
     }
 
     .about-main-text nav a{
-        font-size: 50;
+        font-size: 50px;
     }
 
     .about-main-text nav h1{
         padding-left: 12%;
-        font-size: 58;
+        font-size: 58px;
     }
 
     .about-main-text p{
-        font-size: 32;
+        font-size: 32px;
     }
 
     .about-list{
@@ -531,11 +535,11 @@ div.OnClick{
     }
 
     .about-list h1{
-        font-size: 40;
+        font-size: 40px;
     }
 
     .about-list a{
-        font-size: 32;
+        font-size: 32px;
     }
 
     #projects{
@@ -548,27 +552,27 @@ div.OnClick{
     }
 
     .single-project h1{
-        font-size: 32;
+        font-size: 32px;
     }
     
     .single-project h2{
-        font-size: 18;
+        font-size: 16px;
     }
     
     .single-project p{
-        font-size: 26;
+        font-size: 26px;
     }
 
     #projects_text a{
-        font-size: 50;
+        font-size: 50px;
     }
     
     #projects_text h1{
-        font-size: 58;
+        font-size: 58px;
     }
 
     #projects_button{
-        font-size: 32;
+        font-size: 32px;
         width: 400px;
         height: 50px;
     }
@@ -583,11 +587,15 @@ div.OnClick{
     }
 
     #kontakt-main-text nav a{
-        font-size: 50;
+        font-size: 50px;
     }
     
     #kontakt-main-text nav h1{
-        font-size: 58;
+        font-size: 58px;
+    }
+
+    #kontakts nav a svg{
+        translate: 0px -1px;
     }
 
     #kontakts{
@@ -596,7 +604,7 @@ div.OnClick{
     }
 
     #kontakts a{
-        font-size: 30;
+        font-size: 32px;
     }
 
     #kontakt_mail{
@@ -608,11 +616,11 @@ div.OnClick{
     }
 
     #made_by p{
-        font-size: 40;
+        font-size: 40px;
     }
 
     #made_by a{
-        font-size: 28;
+        font-size: 28px;
     }
 
     .made_by_name{
