@@ -122,8 +122,6 @@ div.OnClick{
     transition: 0.3s;
 }
 
-
-
 #menu #language-button{
     text-decoration: none;
     margin-left: 40vw;
@@ -499,6 +497,7 @@ div.OnClick{
     #about{
         scroll-margin-top: 450px ;
         margin-top: 25vh;
+        max-width: 90vw;
     }
 
     .about-parent{
@@ -614,5 +613,15 @@ div.OnClick{
 
     #made_by a{
         font-size: 28;
+    }
+
+    .made_by_name{
+        margin-top: 10%;
+        margin-left: 7%;
+        text-align: center;
+    }
+
+    .made_by_kontakt{
+        margin-top: 10%;
     }
 }
