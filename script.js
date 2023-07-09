@@ -43,7 +43,7 @@ function underline_menu(you_are_in) {
   } else {
     var element = document.getElementById("menu");
     element.style.opacity = "1";
-    element.style.background = "#091825";
+    element.style.background = "rgb(7, 15, 23)";
   }
 
   try {
@@ -81,22 +81,6 @@ function reveal() {
 }
 
 window.addEventListener("scroll", reveal);
-
-function OnClick(e) {
-  var d = document.createElement("div");
-  d.className = "OnClick";
-  d.style.top = e.clientY + "px";
-  d.style.left = e.clientX + "px";
-  document.body.appendChild(d);
-  d.addEventListener(
-    "animationend",
-    function () {
-      d.parentElement.removeChild(d);
-    }.bind(this)
-  );
-}
-
-document.addEventListener("click", OnClick);
 
 //Menu
 const el = document.getElementById("menu");
