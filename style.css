@@ -1,12 +1,8 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
-html{
+html {
     scroll-behavior: smooth;
     background: #15171a;
     touch-action: manipulation;
+    overflow-x: hidden;
 }
 
 ::-moz-selection {
@@ -17,27 +13,27 @@ html{
     background: #3046577a;
 }
 
-.reveal{
+.reveal {
     position: relative;
     transform: translateY(80px);
     transition: 1s all ease;
   }
   
-.reveal.active{
+.reveal.active {
     transform: translateY(0);
 }
 
-.better-hover{
+.better-hover {
     position: relative;
     transition-duration: 300ms;
     color: #fcfcfc;
 }
 
-.better-hover:hover{
-    color: #3185FC;
+.better-hover:hover {
+    color: #3185FC !important;
 }
 
-.better-hover:hover:before{
+.better-hover:hover:before {
     position: absolute;
     content: "";
     position: absolute;
@@ -51,7 +47,7 @@ html{
     border-bottom: 2px solid #3185FC;
 }
 
-.better-hover:before{
+.better-hover:before {
     position: absolute;
     content: "";
     position: absolute;
@@ -66,163 +62,130 @@ html{
     transition-duration: 300ms;
 }
 
-@keyframes OnClick{
-    0%{
-    opacity: 1;
-    width: 5px; 
-    height: 5px;
-    margin: -2.5px;
-    border-width: 5px;
-    }
-    100%{
-    opacity: 0.2;
-    width: 50px; 
-    height: 50px;
-    margin: -25px;
-    border-width: 0.03px;
-    }
-}
-
-#menu{
+#menu {
     position: fixed;
     background: #101b2500;
     z-index: 999999;
-    width: 100%;
-    height: 9%;
     top: 0;
     left: 0;
-    transition: 0.4s;
+    width: 90vw;
+    height: 9%;
+    padding-left: 5%;
+    padding-right: 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#menu nav{
-    margin-top: 0.8%;
-    margin-left: 10%;
+#menu div {
+    width: 460px;
+    height: min-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#menu nav a{
-    position: relative;
+#language-button {
+    height: min-content;
+}
+
+#menu a {
     text-decoration: none;
     color: #fcfcfc;
-    margin: 20px 25px;
     font-family: Arial;
-    font-size: 24;
+    font-size: 24px;
     font-weight: 600;
     transition: 0.3s;
 }
 
-#menu #language-button{
-    text-decoration: none;
-    margin-left: 40vw;
-}
-
-#menu #language-button:hover{color: #3185FC;}
-
-#menu #main_page_id{
-    font-size: 32;
-    font-weight: 400;
-    color: #3185FC;
-}
-
-#start{
+#start {
+    width: 100%;
     scroll-margin-top: 100px;
     text-align: center;
-    
     padding-bottom: 70vh;
+    padding-top: 30vh;
 }
 
-#centered{
-    display: flex;
-}
-
-#start-main-text{
-    width: 100%;
-    padding-top: 40vh;
-}
-
-#start-main-text h1{
+#start h1 {
     font-family: Arial;
-    font-size: 100;
+    font-size: 100px;
     font-weight: 400;
     color: #fff;
 }
 
-#start-main-text p{
+#start p {
     font-family: Arial;
-    font-size: 20;
+    font-size: 24px;
     font-weight: 400;
     color: #fcfcfc;
-    margin-top: 10px;
+    margin-top: -64px;
 }
 
-#about{
+#about {
     scroll-margin-top: 200px;
     margin-top: 10vh;
-}
-
-.about-parent{
     margin-left: 15%;
-    margin-right: 20%;
-    width: 60%;
-    display: flex;
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
 }
 
-.about-main-text{
-    flex: 1;
-}
-
-.about-main-text nav{
+.about-main-text nav {
     display: block;
     font-family: Arial;
     font-weight: 600;
-    margin-bottom: 15%;
+    margin-bottom: 5%;
 }
 
-.about-main-text nav a{
-    font-size: 40;
+.about-main-text nav a {
+    font-size: 40px;
     color: #fff;
 }
 
-.about-main-text nav h1{
-    font-size: 46;
+.about-main-text nav h1 {
+    font-size: 46px;
     color: #3185FC;
 }
 
-.about-main-text p{
+.about-main-text p {
     font-family: Arial;
-    font-size: 20;
+    font-size: 20px;
     font-weight: 400;
     color: #fcfcfc;
     margin-left: 20%;
 }
 
-.about-main-text p a{
+.about-main-text p a {
     font-family: monospace;
 }
 
-.about-list{
-    margin-top: 12.5%;
-    margin-left: 10%;
+.about-list {
+    margin-top: 20%;
+    margin-left: auto;
+    margin-right: auto;
     font-family: Arial;
 }
 
-.about-list h1{
-    font-size: 24;
+.about-list h1 {
+    margin-top: -5px;
+    font-size: 24px;
     font-weight: 400;
     color: #3185FC;
 }
 
-.about-list a{
-    font-size: 20;
+.about-list a {
+    font-size: 20px;
     font-weight: 400;
     color: #fcfcfc;
 }
 
-#projects{
-    margin-top: 25%;
-    scroll-margin-top: 220px;
+#projects {
+    margin-top: 35%;
+    scroll-margin-top: 340px;
 }
 
-.projects-box{
+.projects-box {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -230,7 +193,7 @@ html{
     margin-right: 15%;
 }
 
-#projects_button{
+#projects_button {
     background: rgb(7, 15, 23);
     border-radius: 12px;
     width: 200px;
@@ -238,18 +201,18 @@ html{
     text-align: center;
     color: #fcfcfc;
     font-family: Arial;
-    font-size: 20;
+    font-size: 20px;
     font-weight: 400;
     text-decoration: none;
     transition: 0.4s;
 }
 
-#projects_button:hover{
+#projects_button:hover {
     transform: translateY(-30%);
     transition: 0.4s;
 }
 
-.single-project{
+.single-project {
     position: relative;
     background: rgb(7, 15, 23);
     text-align: center;
@@ -261,50 +224,50 @@ html{
     transition: 0.4s;
 }
 
-.single-project img{
+.single-project img {
     width: 90%;
     margin-top: 5%;
 }
 
-.single-project a{
+.single-project a {
     text-decoration: none;
 }
 
-.single-project h1{
+.single-project h1 {
     text-align: left;
     font-family: Arial;
     font-weight: 400;
-    font-size: 28;
+    font-size: 28px;
     color: #fff;
     margin-top: 3%;
     margin-left: 5%;
     margin-bottom: 5%;
 }
 
-.single-project h2{
+.single-project h2 {
     font-family: Arial;
     font-weight: 400;
-    font-size: 14;
+    font-size: 14px;
     color: #3185FC;
     margin-left: 5%;
     margin-top: 5%;
     margin-bottom: 5%;
 }
 
-.single-project p{
+.single-project p {
     font-family: Arial;
     font-weight: 400;
-    font-size: 20;
+    font-size: 20px;
     color: #fcfcfc;
     margin-left: 8%;
     margin-right: 8%;
 }
 
-.single-project:hover{
+.single-project:hover {
     transform: translateY(-3%);
 }
 
-#projects_text{
+#projects_text {
     display: block;
     margin-left: 15%;
     margin-bottom: 5%;
@@ -312,22 +275,22 @@ html{
     font-weight: 600;
 }
 
-#projects_text a{
-    font-size: 40;
+#projects_text a {
+    font-size: 40px;
     color: #fff;
 }
 
-#projects_text h1{
-    font-size: 46;
+#projects_text h1 {
+    font-size: 46px;
     color: #3185FC;
 }
 
-#kontakt{
-    margin-top: 25%;
-    scroll-margin-top: 210px;
+#kontakt {
+    margin-top: 35%;
+    scroll-margin-top: 300px;
 }
 
-#kontakt-main-text nav{
+#kontakt-main-text nav {
     display: block;
     margin-left: 15%;
     margin-bottom: 20px;
@@ -335,56 +298,56 @@ html{
     font-weight: 600;
 }
 
-#kontakt-main-text nav h1{
-    font-size: 46;
+#kontakt-main-text nav h1 {
+    font-size: 46px;
     color: #3185FC;
 }
 
-#kontakt-main-text nav a{
-    font-size: 40;
+#kontakt-main-text nav a {
+    font-size: 40px;
     color: #fff;
 }
 
-#kontakts{
+#kontakts {
     display: flex;
     flex-wrap: wrap;
     margin-left: 20%;
     margin-right: 20%;
 }
 
-#kontakts nav a svg{
+#kontakts nav a svg {
     translate: 0px 4px;
 }
 
-#kontakts a{
+#kontakts a {
     color: #fcfcfc;
     text-decoration: none;
     font-family: Arial;
-    font-size: 20;
+    font-size: 20px;
     font-weight: 400;
     margin-left: 15px;
 }
 
-#kontakt_mail{
+#kontakt_mail {
     margin-top: 5%;
     position: relative;
     margin-right: 50%;
     margin-bottom: 20px;
 }
 
-#kontakt_mess{
+#kontakt_mess {
     position: relative;
     margin-right: 50%;
     margin-bottom: 20px;
 }
 
-#kontakt_github{
+#kontakt_github {
     position: relative;
     margin-right: 50%;
     margin-bottom: 20px;
 }
 
-#made_by{
+#made_by {
     position: relative;
     z-index: 1;
     margin-top: 30%;
@@ -395,229 +358,139 @@ html{
     background-color: rgb(7, 15, 23);
 }
 
-#made_by p{
+#made_by p {
     font-family: Arial;
-    font-size: 35;
+    font-size: 35px;
     font-weight: 500;
     color: #fff;
-    margin-top: 40px;
+    margin-top: 50px;
     margin-bottom: 12%;
 }
 
-#made_by a{
+#made_by a {
     font-family: Arial;
-    font-size: 20;
+    font-size: 20px;
     font-weight: 400;
     color: #fcfcfc;
     margin-left: 30px;
 }
 
-.made_by_name{
+.made_by_name {
     position: absolute;
     left: 0%;
     margin-left: 15%;
 }
 
-.made_by_kontakt{
+.made_by_kontakt {
     position: absolute;
     text-align: right;
     right: 0%;
     margin-right: 20%;
 }
 
-.made_by_kontakt p{
+.made_by_kontakt p {
     margin-right: 12%;
 }
 
-@media screen and (max-device-width: 800px){
-    @keyframes OnClick{
-        0%{
-        opacity: 1;
-        width: 5px; 
-        height: 5px;
-        margin: -2.5px;
-        border-width: 5px;
-        }
-        100%{
-        opacity: 0.2;
-        width: 100px; 
-        height: 100px;
-        margin: -50px;
-        border-width: 0.03px;
-        }
+@media only screen and (max-width: 800px) {
+    #menu div {
+        width: 320px;
     }
 
-    #menu{
-        height: 4%;
+    #menu a {
+        font-size: 20px;
     }
 
-    #menu nav{
-        margin-left: 2%;
+    #start {
+        padding-top: 35vh;
     }
 
-    #menu nav a{
-        font-size: 28px;
-    }
-
-    .reveal.active{
-        transform: translateY(-100px);
-    }
-
-    #start{
-        transform: translateY(0);
-        padding-top: 50%;
-        height: 70vh;
-        padding-bottom: 1%;
-    }
-
-    #start-main-text{
-        padding-top: 15vh;
-    }
-
-    #start-main-text h1{
-        font-size: 110px;
-    }
-
-    #start-main-text p{
-        font-size: 40px;
-    }
-
-    #menu #language-button{
-        margin-left: 1%;
-    }
-
-    #about{
-        scroll-margin-top: 450px ;
-        margin-top: 25vh;
-        max-width: 90vw;
-    }
-
-    .about-parent{
-        display: contents;
-    }
-
-    .about-main-text nav{
-        margin-bottom: 3%;
-    }
-
-    .about-main-text{
-        margin-left: 5%;
-        margin-right: 10%;
-    }
-
-    .about-main-text nav a{
-        font-size: 50px;
-    }
-
-    .about-main-text nav h1{
-        padding-left: 12%;
+    #start h1 {
         font-size: 58px;
     }
 
-    .about-main-text p{
-        font-size: 30px;
+    #start p {
+        font-size: 20px;
+        margin-top: -32px;
     }
 
-    .about-list{
-        padding-left: 10%;
+    #about {
+        scroll-margin-top: 50px;
+        margin-left: 7.5%;
+        width: 85%;
+        grid-template-columns: repeat(1, 1fr);
     }
 
-    .about-list h1{
-        font-size: 40px;
-    }
-
-    .about-list a{
-        font-size: 30px;
-    }
-
-    #projects{
-        scroll-margin-top: 450px;
-        margin-top: 75%;
-    }
-    
-    .single-project{
-        flex-basis: 90%;
-    }
-
-    .single-project h1{
-        font-size: 30px;
-    }
-    
-    .single-project h2{
-        font-size: 16px;
-    }
-    
-    .single-project p{
-        font-size: 24px;
-    }
-
-    #projects_text a{
-        font-size: 50px;
-    }
-    
-    #projects_text h1{
-        font-size: 58px;
-    }
-
-    #projects_button{
-        font-size: 32px;
-        width: 400px;
-        height: 50px;
-    }
-
-    #kontakt{
-        scroll-margin-top: 450px;
-        margin-top: 75%;
-    }
-
-    #kontakt-main-text{
+    .about-main-text p {
         margin-left: 10%;
     }
 
-    #kontakt-main-text nav a{
-        font-size: 50px;
+    .about-list {
+        min-width: 60%;
+    }
+
+    #projects {
+        scroll-margin-top: 50px;
+        margin-top: 100%;
+    }
+
+    .projects-box {
+        margin-left: 5%;
+        margin-right: 5%;
     }
     
-    #kontakt-main-text nav h1{
-        font-size: 58px;
+    .single-project {
+        min-width: 75%;
     }
 
-    #kontakts nav a svg{
-        translate: 0px -1px;
+    .single-project h1 {
+        font-size: 24px;
+    }
+    
+    .single-project h2 {
+        font-size: 12px;
+    }
+    
+    .single-project p {
+        font-size: 12px;
     }
 
-    #kontakts{
-        margin-left: 20%;
-        margin-right: 1%;
-    }
-
-    #kontakts a{
-        font-size: 32px;
-    }
-
-    #kontakt_mail{
-        margin-right: 30%;
-    }
-
-    #made_by{
+    #kontakt {
+        scroll-margin-top: 150px;
         margin-top: 75%;
+        margin-bottom: 100%;
     }
 
-    #made_by p{
-        font-size: 40px;
+    #kontakts {
+        margin-left: 15%;
     }
-
-    #made_by a{
-        font-size: 28px;
+    
+    #kontakts a {
+        font-size: 18px;
     }
-
-    .made_by_name{
-        margin-top: 10%;
-        margin-left: 7%;
-        text-align: center;
+    
+    #kontakt_mail {
+        margin-right: 0%;
     }
-
-    .made_by_kontakt{
-        margin-top: 10%;
+    
+    #kontakt_mess {
+        margin-right: 0%;
+    }
+    
+    #made_by p {
+        font-size: 24px;
+    }
+    
+    #made_by a {
+        margin-left: 0px;
+        font-size: 16px;
+    }
+    
+    .made_by_name {
+        margin-left: 7.5%;
+    }
+    
+    .made_by_kontakt p {
+        margin-right: 12%;
     }
 }
