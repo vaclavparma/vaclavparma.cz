@@ -61,6 +61,13 @@ h3 a {
     transition: 0.2s;
 }
 
+#main-button{
+    color: #3185FC !important; 
+    font-size: 32px !important; 
+    font-weight: 400 !important; 
+    text-decoration: none;
+}
+
 #navbar div {
     display: flex;
     align-items: center;
@@ -107,4 +114,40 @@ h3 a {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 768px) {
+    p {
+        font-size: 16px;
+    }
+    
+    h3 {
+        font-size: 20px;
+    }
+    
+    h3 a {
+        font-size: 20px;
+    }
+    
+    .section {
+        width: 70vw;
+    }
+
+    #navbar a {
+        font-size: 16px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #main-button {
+        font-size: 20px !important;
+    }
+
+    #start h1 {
+        font-size: 40px;
+    }
+
+    #start p {
+        font-size: 16px;
+    }
 }
