@@ -54,7 +54,7 @@ h2 {
     text-shadow:
         0 0 7px var(--primary-color),
         0 0 10px var(--primary-color),
-        0 0 21px var(--primary-color)
+        0 0 18px var(--primary-color)
 }
 
 #navbar {
@@ -112,6 +112,10 @@ h2 {
 #text-animation {
     color: var(--primary-color);
     transition: 0.2s;
+}
+
+#education {
+    height: 100vh;
 }
 
 #projects {
