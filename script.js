@@ -59,3 +59,41 @@ window.onload = (event) => {
     } 
   }, 2500);
 };
+
+
+
+let underlined = "";
+let underlined_old = "";
+function underline_menu(you_are_in) {
+  if (you_are_in == "projects") {
+    underlined = "projects-menu-button";
+  } else if (you_are_in == "contact") {
+    underlined = "contact-menu-button";
+  } else {
+    underlined = "";
+  }
+
+  try {
+    const element = document.getElementById(underlined_old);
+    element.classList.remove("link-hover");
+  } catch {}
+  try {
+    const element = document.getElementById(underlined);
+    element.classList.add("link-hover");
+  } catch {}
+  underlined_old = underlined;
+}
+
+window.addEventListener("scroll", () => {
+  const reveals = document.querySelectorAll(".scroll-tracker");
+  
+  for (let i = 0; i < reveals.length; i++) {
+    const windowHeight = window.innerHeight;
+    const elementTop = reveals[i].getBoundingClientRect().top;
+    const elementVisible = 120;
+  
+    if (elementTop < windowHeight - elementVisible) {
+      underline_menu(reveals[i].id);
+    }
+  }
+});
