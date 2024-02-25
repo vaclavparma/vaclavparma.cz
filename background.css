@@ -1,6 +1,6 @@
 
 html {
-  background: #15171a;
+  background: #111316;
 }
 
 #stars-main {
@@ -70,7 +70,7 @@ html {
   }
 }
 
-span{
+.stars{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -82,7 +82,7 @@ span{
   animation: animate 30s linear infinite;
 }
 
-span::before{
+.stars::before{
   content: '';
   position: absolute;
   top: 50%;
@@ -101,7 +101,7 @@ span::before{
     }
 }
 
-span:nth-child(1){
+.stars:nth-child(1){
   top: -300;
   left: -300;
   right: initial;
@@ -109,7 +109,7 @@ span:nth-child(1){
   animation-duration: 10s;
 }
 
-span:nth-child(2){
+.stars:nth-child(2){
   top: -300;
   left: -220px;
   right: initial;
@@ -117,7 +117,7 @@ span:nth-child(2){
   animation-duration: 30s;
 }
 
-span:nth-child(3){
+.stars:nth-child(3){
   top: -220px;
   left: -300px;
   right: initial;
@@ -125,7 +125,7 @@ span:nth-child(3){
   animation-duration: 20s;
 }
 
-span:nth-child(4){
+.stars:nth-child(4){
   top: -300px;
   left: -120px;
   right: initial;
@@ -133,7 +133,7 @@ span:nth-child(4){
   animation-duration: 15s;
 }
 
-span:nth-child(5){
+.stars:nth-child(5){
   top: -300px;
   left: 300px;
   right: initial;
@@ -141,7 +141,7 @@ span:nth-child(5){
   animation-duration: 30s;
 }
 
-span:nth-child(6){
+.stars:nth-child(6){
   top: 0px;
   left: -300px;
   right: initial;
@@ -149,7 +149,7 @@ span:nth-child(6){
   animation-duration: 17.5s;
 }
 
-span:nth-child(7){
+.stars:nth-child(7){
   top: -300px;
   left: 400px;
   right: initial;
@@ -157,7 +157,7 @@ span:nth-child(7){
   animation-duration: 12.5s;
 }
 
-span:nth-child(8){
+.stars:nth-child(8){
   top: -300px;
   left: 700px;
   right: initial;
