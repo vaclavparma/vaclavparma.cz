@@ -17,7 +17,9 @@ html {
 
 p {
     font-size: 16px;
-    color: #dcdcdc;
+    line-height: 24px;
+    font-weight: 600;
+    color: #ffffff;
 }
 
 h1 {
@@ -30,6 +32,11 @@ h2 {
     font-size: 32px;
     color: #fff;
     margin-bottom: 16px;
+}
+
+.section-h1 {
+    text-align: center;
+    margin-bottom: 64px;
 }
 
 .link {
@@ -59,6 +66,7 @@ h2 {
 
 #navbar {
     position: fixed;
+    z-index: 99999999;
     top: -1vh;
     left: -1vw;
     height: 7vh;
@@ -78,7 +86,7 @@ h2 {
 }
 
 #navbar a {
-    color: #cacaca;
+    color: #ffffff;
     font-size: 20px;
     font-weight: 600;
     margin-left: 32px;
@@ -103,10 +111,15 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 #start div {
     width: 30vw;
+}
+
+#start div p {
+    margin-top: 32px;
 }
 
 #text-animation {
@@ -114,19 +127,190 @@ h2 {
     transition: 0.2s;
 }
 
-#education {
-    height: 100vh;
+#social-icons a {
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    font-size: 32px;
+    border-radius: 50%;
+    color: var(--primary-color);
+    margin: 32px 16px 32px 0;
+    transition: 0.3s ease-in-out;
+}
+
+#social-icons a:hover {
+    color: white;
+    transform: scale(1.05)translateY(-5px);
+    box-shadow: 0 0 25px var(--primary-color);
+    background-color: var(--primary-color);
+}
+
+#experiences {
+    padding: 30vh 15px;
+    scroll-margin-top: -15vh;
+}
+
+.timeline-items {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.timeline-items::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: var(--primary-color);
+    left: calc(50% - 1px);
+}
+
+.timeline-item {
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item:nth-child(odd) {
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    padding-left: calc(50% + 30px);
+}
+
+.timeline-dot {
+    height: 20px;
+    width: 20px;
+    background-color: var(--primary-color);
+    box-shadow: 0 0 25px var(--primary-color),
+                0 0 50px var(--primary-color);
+    position: absolute;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top: 10px;
+}
+
+.timeline-date {
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    margin: 6px 0 15px;
+}
+
+.timeline-content {
+    background-color: rgba(0, 0, 0, 0.75);
+    border: 3px solid var(--primary-color);
+    padding: 30px 50px;
+    border-radius: 4rem;
+    box-shadow: 0 0 10px var(--primary-color);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.timeline-content p {
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+
+}
+
+.timeline-content h3 {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 0 10px;
+}
+
+.timeline-content:hover {
+    transform: scale(1.025);
+    box-shadow: 0 0 25px var(--primary-color);
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+}
+
+::-webkit-scrollbar-track {
+    background-color: black;
+    width: 50px;
 }
 
 #projects {
+    max-width: 1200px;
+    margin: auto;
+    padding: 35vh 0;
+    scroll-margin-top: -20vh;
+    position: relative;
+}
+
+#projects div {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#projects div div {
+    width: 45%;
+    height: 25vh;
+    margin: 32px 24px 0 24px;
+    background-color: rgba(0, 0, 0, 0.75);
+    border: 3px solid var(--primary-color);
+    border-radius: 50px;
+    box-shadow: 0 0 10px var(--primary-color);
+    transition: 0.3s ease-in-out;
+}
+
+@media (max-width: 1100px) {
+    #projects div div {
+        width: 70%;
+        height: 30vh;
+    }
+}
+
+#projects div div img {
+    width: 100%;
+    height: 100%;
+}
+
+#projects div div:hover {
+    transform: scale(1.025);
+    box-shadow: 0 0 25px var(--primary-color);
+}
+
+#cv {
+    padding: 30vh 15px;
+    scroll-margin-top: -15vh;
     height: 100vh;
 }
 
-#contact {
-    height: 100vh;
+#cv object {
+    width: 60vw;
+    height: 70vh;
+    margin-left: 20vw;
 }
 
 #footer {
+    margin-top: 40vh;
     position: relative;
     z-index: 999;
     bottom: -2vh;
@@ -137,8 +321,94 @@ h2 {
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
+    p {
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 36px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
 
+    .nav {
+        display: none;
+    }
+
+    #main-button{
+        font-size: 18px !important;
+    }
+    
+    #main-button:hover {
+        font-size: 22px !important;
+    }
+
+    #navbar a {
+        font-size: 18px;
+    }
+
+    #start {
+        width: 75vw;
+    }
+
+    #start div {
+        width: 75vw;
+    }
+
+    #start-img {
+        top: 25vh;
+        left: calc(50% - 5px);
+        position: absolute;
+    }
+
+    #start-text {
+        top: 40vh;
+        position: absolute;
+    }
+    
+    #social-icons a {
+        margin-top: 18px;
+        width: 36px;
+        height: 36px;
+        font-size: 24px;
+    }
+
+    .timeline-items::before {
+        left: calc(10% - 1px);
+    }
+
+    .timeline-item:nth-child(odd) {
+        padding-right: 10%;
+        padding-left: calc(10% + 30px);
+        text-align: left;
+    }
+
+    .timeline-item:nth-child(even) {
+        padding-right: 10%;
+        padding-left: calc(10% + 30px);
+    }
+
+    .timeline-content p {
+        font-size: 14px;
+    
+    }
+    
+    .timeline-content h3 {
+        font-size: 18px;
+    }
+
+    .timeline-dot {
+        left: calc(10% - 8px);
+    }
+
+    #projects div div {
+        width: 80%;
+        height: 25vh;
+    }
 }

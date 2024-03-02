@@ -65,12 +65,12 @@ window.onload = (event) => {
 let underlined = "";
 let underlined_old = "";
 function underline_menu(you_are_in) {
-  if (you_are_in == "education") {
-    underlined = "education-menu-button";
+  if (you_are_in == "experiences") {
+    underlined = "experiences-menu-button";
   } else if (you_are_in == "projects") {
     underlined = "projects-menu-button";
-  } else if (you_are_in == "contact") {
-    underlined = "contact-menu-button";
+  } else if (you_are_in == "cv") {
+    underlined = "cv-menu-button";
   } else {
     underlined = "";
   }
