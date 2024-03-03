@@ -127,6 +127,23 @@ h2 {
     transition: 0.2s;
 }
 
+#start-img img {
+    z-index: 10;
+    width: 75%;
+    max-width: 400px;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--primary-color),
+                0 0 50px var(--primary-color);
+    transition: 0.3s ease-in-out;
+}
+
+#start-img img:hover {
+    transform: scale(1.025);
+    box-shadow: 0 0 25px var(--primary-color),
+                0 0 50px var(--primary-color),
+                0 0 55px var(--primary-color);
+}
+
 #social-icons a {
     text-decoration: none;
     display: inline-flex;
@@ -145,7 +162,7 @@ h2 {
 
 #social-icons a:hover {
     color: white;
-    transform: scale(1.05)translateY(-5px);
+    transform: scale(1.05)translateY(-3px);
     box-shadow: 0 0 25px var(--primary-color);
     background-color: var(--primary-color);
 }
@@ -315,13 +332,12 @@ h2 {
     z-index: 999;
     bottom: -2vh;
     left: -2vw;
-    height: 22vh;
+    height: 32vh;
     width: 102vw;
     display: flex;
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(4px);
-    background-color: rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
@@ -330,13 +346,19 @@ h2 {
     }
     
     h1 {
-        font-size: 36px;
+        font-size: 30px;
+        margin-bottom: 8px;
     }
     
     h2 {
         font-size: 24px;
+        margin-bottom: -18px;
     }
 
+    .section-h1 {
+        margin-bottom: 32px;
+    }
+    
     .nav {
         display: none;
     }
@@ -360,15 +382,16 @@ h2 {
     #start div {
         width: 75vw;
     }
-
-    #start-img {
-        top: 25vh;
-        left: calc(50% - 5px);
+    
+    #start-img img {
+        top: 15vh;
+        left: 25%;
         position: absolute;
+        width: 50%;
     }
 
     #start-text {
-        top: 40vh;
+        top: 50vh;
         position: absolute;
     }
     

@@ -5,6 +5,7 @@ html {
 
 #stars-main {
   position: fixed;
+  z-index: -999;
 }
 
 #stars {
