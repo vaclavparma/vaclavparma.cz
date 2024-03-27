@@ -8,6 +8,7 @@
   <meta name="description" content="Hello, I'm student, programmer and maker from Czech republic. I study at the grammar school in Louny. I learned my knowledge of programming and electronics mostly by trial and error. Most often I program, but I'm also interested in 3D printing, computers and various electronic projects." />
   <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, target-densitydpi=device-dpi">
 
+  <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
   <link rel="shotcut icon" href="../pictures/logo.png" />
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="../background.css" />
@@ -19,54 +20,107 @@
       <div id="stars"></div>
       <div id="stars2"></div>
       <div id="stars3"></div>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
+      <span class="stars"></span>
+      <span class="stars"></span>
+      <span class="stars"></span>
+      <span class="stars"></span>
+      <span class="stars"></span>
+      <span class="stars"></span>
+      <span class="stars"></span>
+      <span class="stars"></span>
     </div>
   </section>
 
-  <section id="navbar">
+  <section id="navbar">     
+    <a href="#" id="main-button">
+      Václav
+      <span class="neon-text" style="color: var(--primary-color);">Parma</span>
+    </a>
     <div>
-      <a href="#" style="color: #3185FC; font-size: 32px; font-weight: 400; text-decoration: none;">{vp}</a>
-      <a href="#about" class="link">About me</a>
-      <a href="#contact" class="link">Contact</a>
+      <a id="experiences-menu-button" href="#experiences" class="link nav">Experience</a>
+      <a id="projects-menu-button" href="#projects" class="link nav">Projects</a>
+      <!-- <a id="cv-menu-button" href="#cv" class="link nav">Životopis</a> -->
+      <a href="/index.html" class="link">CS</a>
     </div>
-    <a href="../index.html" class="link">CS</a>
   </section>
 
-  <section id="start">
-    <h1>Václav Parma</h1>
-    <p>Student, programmer and maker</p>
+  <section id="start" class="scroll-tracker">
+    <div id="start-text">
+      <h1>Hello, I'm <span style="color: var(--primary-color);">Václav</span></h1>
+      <h2 onload="fetchWords();">Jsem <span id="text-animation">Student, Programmer, Maker</span></h2>
+      <p>I'm 18.128154390 <a id="age">{years}</a> years old. I'm from Czech republic and I study at the grammar school in Louny. I learned my knowledge of programming and electronics mostly by trial and error. Most often I program, but I'm also interested in 3D printing and hardware.</p>
+      <div id="social-icons">
+        <a target="_blank" href="https://www.linkedin.com/in/vaclav-parma/"><i class="bx bxl-linkedin"></i></a>
+        <a target="_blank" href="https://github.com/Venca321"><i class='bx bxl-github' ></i></i></a>
+        <a target="_blank" href="mailto:kontakt@vaclavparma.cz"><i class='bx bx-envelope'></i></a>
+      </div>
+    </div>
+    <div id="start-img">
+      <img src="../pictures/profil.jpg">
+    </div>
   </section>
 
-  <section id="about" class="section">
-    <h3>[<a>About me</a>]</h3>
-    <p>Hello, I'm <a id="age">{years}</a> years old.</p>
-    <p>
-      I'm student, programmer and maker from Czech republic. I study at the grammar school in Louny.
-    </p>
-    <p>
-      I learned my knowledge of programming and electronics mostly by trial and error.
-    </p>
-    <p>
-      Most often I program, but I'm also interested in 3D printing, computers and various electronic projects.
-    </p>
+  <section id="experiences" class="scroll-tracker">
+    <h1 class="section-h1">Experience</h1>
+    <div class="timeline-items">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2017</div>
+        <div class="timeline-content">
+          <h3>Gymnázium Václava Hlavatého Louny</h3>
+          <p>V roce 2017 jsem nastoupil na osmileté studium na Gymnáziu Václava Hlavatého v Lounech.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2019</div>
+        <div class="timeline-content">
+          <h3>První projekty v Pythonu</h3>
+          <p>V roce 2019 jsem začal první projekt v Pythonu a naučil jsem se tím programovat.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2023</div>
+        <div class="timeline-content">
+          <h3>AI Researcher Oscillator Labs s.r.o.</h3>
+          <p>V roce 2023 jsem začal uplatňovat a dále zdokonalovat své znalosti jako AI Researcher v Oscillator Labs s.r.o.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2024</div>
+        <div class="timeline-content">
+          <h3>Ročníková Práce</h3>
+          <p>Na přelomu roku 2023 a 2024 jsem psal ročníkovou práci Detekce gest pomocí počítačového vidění ve hře "kámen, nůžky, papír".</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="contact" class="section">
-    <h3>[<a>Contact</a>]</h3>
-    <p>Email: <a href="mailto:contact@vaclavparma.cz" target="_blank" class="link">contact@vaclavparma.cz</a></p>
-    <p>Linkedin: <a href="https://www.linkedin.com/in/vaclav-parma/" target="_blank" class="link">Václav Parma</a></p>
-    <p>GitHub: <a href="https://github.com/Venca321" target="_blank" class="link">Venca321</a></p>
+  <section id="projects" class="scroll-tracker">
+    <h1 class="section-h1">Projects</h1>
+    <div>
+      <div>
+        <img src="https://github-readme-stats.vercel.app/api?username=venca321&show_icons=true&theme=transparent&hide_border=true&text_color=31e8fc&title_color=31e8fc&hide_title=true&rank_icon=percentile&include_all_commits=true&locale=cs">
+      </div>
+      <div>
+        <img src="https://github-readme-activity-graph.vercel.app/graph?username=venca321&hide_title=true&hide_border=true&color=31e8fc&line=31e8fc&point=2ac8da&bg_color=00000000">
+      </div>
+      <div>
+        <!-- <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=venca321&theme=transparent&hide_border=true&text_color=31e8fc&hide_title=true&locale=cs"> -->
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=venca321&layout=compact&theme=transparent&hide_border=true&text_color=31e8fc&hide_title=true&locale=cs">
+      </div>
+    </div>
   </section>
+
+  <!-- <section id="cv" class="scroll-tracker">
+    <h1 class="section-h1">Životopis</h1>
+    <object data="/životopis.pdf"></object> 
+  </section> -->
 
   <section id="footer">
-    <p>Václav Parma</p>
+    <p>© Václav Parma</p>
   </section>
 </body>
 </html>
