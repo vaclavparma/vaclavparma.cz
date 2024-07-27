@@ -1,0 +1,23 @@
+/* style.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #0a0a0a, #000000);
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
