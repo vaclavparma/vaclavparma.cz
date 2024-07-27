@@ -1,0 +1,81 @@
+/* stars/stars.css */
+
+#stars-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Pozadí za ostatními prvky */
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  animation: float 60s infinite linear, fadeIn 0.1s forwards; /* Zpomalíme animaci a přidáme fade-in */
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100vh);
+  }
+}
+
+.shooting-star {
+  position: absolute;
+  width: 6px; /* Velikost padajících hvězd */
+  height: 6px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 50%;
+  animation: shooting 3s ease-in-out forwards, fadeIn 0.1s forwards; /* Doba animace a fade-in */
+}
+
+.shooting-star::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px; /* Délka ocásku */
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0)
+  );
+  transform: translateY(-50%) rotate(-30deg); /* Ocásek ve směru pádu */
+  transform-origin: left center;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+@keyframes shooting {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-100vw, 100vh);
+    opacity: 0;
+  } /* Směr pádu a rotace ocásku */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
