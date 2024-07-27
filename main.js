@@ -2,8 +2,8 @@
 
 window.onload = function () {
   createStars();
-  setTimeout(generateShootingStars, 2000); // Zpoždění 2 sekundy pro padající hvězdy
-  animateStars(); // Spustíme animaci hvězd
+  generateShootingStars();
+  animateStars();
 };
 
 window.addEventListener("scroll", function () {
@@ -26,14 +26,36 @@ window.addEventListener("scroll", function () {
 });
 
 function animateStars() {
-  const stars = document.querySelectorAll(".star");
-  stars.forEach((star) => {
+  const smallStars = document.querySelectorAll(".small-star");
+  const mediumStars = document.querySelectorAll(".medium-star");
+  const largeStars = document.querySelectorAll(".large-star");
+
+  smallStars.forEach((star) => {
     let top = parseFloat(star.style.top);
-    top -= 0.1; // Rychlejší pohyb nahoru
+    top -= 0.05;
     if (top < 0) {
       top = window.innerHeight;
     }
     star.style.top = `${top}px`;
   });
+
+  mediumStars.forEach((star) => {
+    let top = parseFloat(star.style.top);
+    top -= 0.1;
+    if (top < 0) {
+      top = window.innerHeight;
+    }
+    star.style.top = `${top}px`;
+  });
+
+  largeStars.forEach((star) => {
+    let top = parseFloat(star.style.top);
+    top -= 0.15;
+    if (top < 0) {
+      top = window.innerHeight;
+    }
+    star.style.top = `${top}px`;
+  });
+
   requestAnimationFrame(animateStars);
 }

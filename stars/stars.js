@@ -2,13 +2,13 @@
 
 function createStars() {
   const starsContainer = document.getElementById("stars-container");
-  const starCount = 1000; // Zvýšený počet hvězd, aby pokryly celou výšku stránky
+  const starCount = 1000;
 
   for (let i = 0; i < starCount; i++) {
     const star = document.createElement("div");
     star.classList.add("star");
 
-    const size = Math.round(Math.random() * 3); // Zvýšení velikosti hvězdy o 1 pixel
+    const size = Math.ceil(Math.random() * 3);
     star.style.width = `${size}px`;
     star.style.height = `${size}px`;
 
@@ -21,7 +21,7 @@ function createStars() {
     }
 
     const posX = Math.random() * 100;
-    const posY = Math.random() * document.body.scrollHeight; // Generujeme hvězdy po celé výšce stránky
+    const posY = Math.random() * document.body.scrollHeight;
     star.style.left = `${posX}vw`;
     star.style.top = `${posY}px`;
 
