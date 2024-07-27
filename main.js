@@ -20,6 +20,6 @@ window.addEventListener("scroll", function () {
   });
 
   largeStars.forEach((star) => {
-    star.style.transform = `translateY(${-scrollPosition * 0.15}px)`;
+    star.style.transform = `translateY(${-scrollPosition * 0.2}px)`;
   });
 });

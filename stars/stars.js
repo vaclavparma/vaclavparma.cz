@@ -2,7 +2,7 @@
 
 function createStars() {
   const starsContainer = document.getElementById("stars-container");
-  const starCount = 400; // Zvýšený počet hvězd
+  const starCount = 1000; // Zvýšený počet hvězd, aby pokryly celou výšku stránky
 
   for (let i = 0; i < starCount; i++) {
     const star = document.createElement("div");
@@ -21,9 +21,9 @@ function createStars() {
     }
 
     const posX = Math.random() * 100;
-    const posY = Math.random() * 100;
+    const posY = Math.random() * document.body.scrollHeight; // Generujeme hvězdy po celé výšce stránky
     star.style.left = `${posX}vw`;
-    star.style.top = `${posY}vh`;
+    star.style.top = `${posY}px`;
 
     starsContainer.appendChild(star);
   }

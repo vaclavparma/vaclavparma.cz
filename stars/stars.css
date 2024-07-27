@@ -15,7 +15,8 @@
   position: absolute;
   background: white;
   border-radius: 50%;
-  animation: fadeIn 0.1s forwards; /* Zkrácená fade-in animace */
+  transition: transform 0.25s ease-out; /* Přidáme plynulý přechod pro transformaci */
+  animation: fadeIn 0.1s forwards; /* Pouze fade-in animace */
 }
 
 @keyframes fadeIn {
