@@ -8,7 +8,7 @@ function createStars() {
     const star = document.createElement("div");
     star.classList.add("star");
 
-    const size = Math.random() * 3;
+    const size = Math.round(Math.random() * 3); // Zvýšení velikosti hvězdy o 1 pixel
     star.style.width = `${size}px`;
     star.style.height = `${size}px`;
 

@@ -15,7 +15,7 @@
   position: absolute;
   background: white;
   border-radius: 50%;
-  transition: transform 0.25s ease-out; /* Přidáme plynulý přechod pro transformaci */
+  transition: transform 0.2s ease-out; /* Přidáme plynulý přechod pro transformaci */
   animation: fadeIn 0.1s forwards; /* Pouze fade-in animace */
 }
 
