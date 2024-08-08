@@ -1,20 +1,34 @@
 /* style.css */
 
 html {
+  overflow-x: hidden;
+  touch-action: manipulation;
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
   background: #121212;
   color: white;
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #bebebe;
+}
+
+::selection {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .section {
   height: 100vh;
+  width: 50%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -88,8 +102,16 @@ body {
 
 #home p {
   font-size: 24px;
-  font-weight: 300;
-  color: #898989;
+  font-weight: 400;
+  color: #969696;
+}
+
+#about {
+  display: flex;
+}
+
+#age {
+  font-family: "Roboto Mono", monospace;
 }
 
 #footer {
@@ -98,7 +120,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #101010e9;
+  background-color: #101010f0;
   margin-top: 25vh;
 }
 
