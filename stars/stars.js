@@ -81,7 +81,7 @@ function animateStars() {
   requestAnimationFrame(animateStars);
 }
 
-let lastScrollPosition = 0;
+let lastScrollPosition = window.scrollY;
 window.addEventListener("scroll", function () {
   const scrollPosition = window.scrollY;
   if (Math.abs(scrollPosition - lastScrollPosition) < window.innerHeight / 20) {
