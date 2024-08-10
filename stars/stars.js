@@ -108,15 +108,19 @@ function throttle(func, limit) {
   };
 }
 
+let lastScrollPosition = window.scrollY;
 function handleScroll() {
   const scrollPosition = window.scrollY;
+  if (Math.abs(scrollPosition - lastScrollPosition) < window.innerHeight / 25) {
+    return;
+  }
+  lastScrollPosition = scrollPosition;
 
   const smallStarsWrapper = document.getElementById("small-stars-wrapper");
-  const mediumStarsWrapper = document.getElementById("medium-stars-wrapper");
-  const largeStarsWrapper = document.getElementById("large-stars-wrapper");
-
   smallStarsWrapper.style.transform = `translateY(${-scrollPosition * 0.05}px)`;
+  const mediumStarsWrapper = document.getElementById("medium-stars-wrapper");
   mediumStarsWrapper.style.transform = `translateY(${-scrollPosition * 0.1}px)`;
+  const largeStarsWrapper = document.getElementById("large-stars-wrapper");
   largeStarsWrapper.style.transform = `translateY(${-scrollPosition * 0.2}px)`;
 }
 
