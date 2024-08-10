@@ -87,27 +87,6 @@ function animateStars() {
   requestAnimationFrame(animateStars);
 }
 
-function throttle(func, limit) {
-  let lastFunc;
-  let lastRan;
-  return function () {
-    const context = this;
-    const args = arguments;
-    if (!lastRan) {
-      func.apply(context, args);
-      lastRan = Date.now();
-    } else {
-      clearTimeout(lastFunc);
-      lastFunc = setTimeout(function () {
-        if (Date.now() - lastRan >= limit) {
-          func.apply(context, args);
-          lastRan = Date.now();
-        }
-      }, limit - (Date.now() - lastRan));
-    }
-  };
-}
-
 let lastScrollPosition = window.scrollY;
 function handleScroll() {
   const scrollPosition = window.scrollY;
@@ -128,5 +107,5 @@ window.onload = function () {
   createStars();
   setInterval(createShootingStar, 2000);
   requestAnimationFrame(animateStars);
-  window.addEventListener("scroll", throttle(handleScroll, 100));
+  window.addEventListener("scroll", handleScroll);
 };
