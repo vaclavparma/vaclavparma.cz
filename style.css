@@ -1,5 +1,14 @@
 /* style.css */
 
+* {
+  --background: #121212;
+  --primary: #7871aa;
+  --secondary: #2a2a2a;
+  --heading: #ffffff;
+  --sub-heading: #d4d4d4;
+  --text: #e2e2e2;
+}
+
 html {
   overflow-x: hidden;
   touch-action: manipulation;
@@ -7,22 +16,53 @@ html {
 }
 
 body {
+  background: var(--background);
+  font-family: "Roboto";
   margin: 0;
-  padding: 0;
-  background: #121212;
-  color: white;
-  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 112px;
+  line-height: 1;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: var(--heading);
+  margin: 0 0 12px 0;
+}
+
+h2 {
+  font-size: 64px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: var(--heading);
+  margin: 0;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: var(--sub-heading);
+  margin: 0;
 }
 
 p {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 28px;
-  font-weight: 500;
-  color: #bebebe;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--text);
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+  margin: 0;
 }
 
 ::selection {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--primary);
 }
 
 .section {
@@ -36,9 +76,15 @@ p {
   font-size: 2rem;
 }
 
-.content {
-  position: relative;
-  z-index: 1;
+.section-heading {
+  width: 100%;
+  text-align: center;
+  border-bottom: 2px solid var(--primary);
+  margin-bottom: 24px;
+}
+
+.section-heading h2 {
+  margin-bottom: 8px;
 }
 
 #sidebar {
@@ -49,7 +95,7 @@ p {
   flex-direction: column;
   align-items: center;
   width: 60px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--secondary);
   border-radius: 10px;
   transform: translateY(-50%);
   z-index: 1000;
@@ -70,7 +116,7 @@ p {
 }
 
 #sidebar a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--primary);
 }
 
 #scroll-arrow {
@@ -94,34 +140,21 @@ p {
   }
 }
 
-#home h1 {
-  font-size: 81px;
-  font-weight: 600;
-  margin: 0;
-}
-
-#home p {
-  font-size: 24px;
-  font-weight: 400;
-  color: #969696;
-}
-
-#about {
-  display: flex;
-}
-
 #age {
+  font-size: inherit;
+  font-weight: 500;
   font-family: "Roboto Mono", monospace;
 }
 
 #footer {
+  bottom: 0;
   width: 100%;
   height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #101010f0;
-  margin-top: 25vh;
+  background-color: #101010f5;
+  margin-top: 50vh;
 }
 
 @media (max-width: 768px) {
