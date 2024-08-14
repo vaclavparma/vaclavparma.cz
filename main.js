@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
       diffDate.getMinutes() / 525600 +
       diffDate.getSeconds() / 31536000 +
       diffDate.getMilliseconds() / 31536000000;
-    my_age = Math.round((my_age - date_fix) * 1000000000) / 1000000000;
-    my_age = my_age.toFixed(9);
+    my_age = Math.round((my_age - date_fix) * 10000000000) / 10000000000;
+    my_age = my_age.toFixed(10);
     const element = document.getElementById("age");
     element.textContent = my_age;
   }, 100);
