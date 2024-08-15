@@ -6,7 +6,7 @@
   --secondary: #2a2a2a;
   --heading: #ffffff;
   --sub-heading: #d4d4d4;
-  --text: #e2e2e2;
+  --text: #b5b5b5;
 }
 
 html {
@@ -77,8 +77,8 @@ a {
 .section-heading {
   width: 100%;
   text-align: center;
-  border-bottom: 2px solid var(--primary);
-  margin-bottom: 24px;
+  border-bottom: 3px solid var(--primary);
+  margin-bottom: 32px;
 }
 
 .section-heading h2 {
@@ -115,11 +115,13 @@ a {
 
 #sidebar a:hover {
   background-color: var(--primary);
-  padding-left: 7px;
-  transform: translateX(4px);
+  box-shadow: 0 0 8px var(--primary), 0 0 16px var(--primary);
+  padding-left: 6px;
+  transform: translateX(2px);
 }
 
 #scroll-arrow {
+  color: var(--sub-heading);
   position: fixed;
   top: 95%;
   left: 50%;
@@ -151,19 +153,22 @@ a {
 }
 
 #about {
-  margin-top: 20vh;
-  scroll-margin-top: 40vh;
+  margin-top: 50vh;
+  scroll-margin-top: 20vh;
+}
+
+#about p {
+  margin-bottom: 28px;
 }
 
 #age {
   font-size: inherit;
-  font-weight: 500;
   font-family: "Roboto Mono", monospace;
 }
 
 #work {
-  margin-top: 80vh;
-  scroll-margin-top: 40vh;
+  margin-top: 90vh;
+  scroll-margin-top: 20vh;
 }
 
 .timeline-items {

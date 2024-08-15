@@ -1,5 +1,11 @@
 /* stars/stars.css */
 
+* {
+  --small-star-color: #ffffffb0;
+  --medium-star-color: #ffffff90;
+  --large-star-color: #ffffffa0;
+}
+
 #stars-container {
   position: fixed;
   top: 0;
@@ -26,19 +32,19 @@
 }
 
 .small-star {
-  background: #ffffff60;
+  background: var(--small-star-color);
   width: 1px;
   height: 1px;
 }
 
 .medium-star {
-  background: #ffffff90;
+  background: var(--medium-star-color);
   width: 2px;
   height: 2px;
 }
 
 .large-star {
-  background: #ffffffa0;
+  background: var(--large-star-color);
   width: 3px;
   height: 3px;
 }
@@ -47,11 +53,7 @@
   position: absolute;
   width: 6px;
   height: 6px;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
   border-radius: 50%;
   animation: shooting 3s ease-in-out forwards, fadeIn 0.1s forwards;
 }
@@ -63,11 +65,7 @@
   left: 50%;
   width: 120px;
   height: 2px;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.8),
-    rgba(255, 255, 255, 0)
-  );
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
   transform: translateY(-50%) rotate(-30deg);
   transform-origin: left center;
   pointer-events: none;
