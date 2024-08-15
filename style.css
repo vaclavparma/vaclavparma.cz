@@ -101,16 +101,20 @@ a {
 
 #sidebar a {
   display: block;
+  justify-content: center;
+  align-items: center;
   color: #ffffff;
   width: fit-content;
-  margin: 10px 0;
+  margin: 8px 0;
   padding: 5px;
   border-radius: 10px;
   transition: 0.3s ease;
 }
 
-#sidebar a i {
-  font-size: 32px;
+#sidebar a svg {
+  width: 32px;
+  height: 32px;
+  fill: white;
 }
 
 #sidebar a:hover {
@@ -121,11 +125,9 @@ a {
 }
 
 #scroll-arrow {
-  color: var(--sub-heading);
   position: fixed;
   top: 95%;
   left: 50%;
-  font-size: 36px;
   pointer-events: none;
   z-index: -1;
   transition: 0.5s;
@@ -140,6 +142,12 @@ a {
   50% {
     transform: translateY(-20px) translateX(-50%);
   }
+}
+
+#scroll-arrow svg {
+  fill: var(--sub-heading);
+  width: 36px;
+  height: 36px;
 }
 
 #home {
