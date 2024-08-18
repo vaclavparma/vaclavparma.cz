@@ -1,0 +1,18 @@
+---
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div class="section" id="experience">
+  <div class="section-heading"><h3>{t('experience.title')}</h3></div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid explicabo expedita, rem animi quidem iure aperiam eaque molestiae numquam, alias ipsum beatae modi nesciunt ea dolor molestias doloribus at nam.</p>
+</div>
+
+<style>
+  #experience {
+    margin-top: 90vh;
+    scroll-margin-top: 20vh;
+  }
+</style>

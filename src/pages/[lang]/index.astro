@@ -1,6 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import ScrollArrow from '../../components/ScrollArrow.astro';
+import Home from '../../components/main-page/Home.astro';
+import About from '../../components/main-page/About.astro';
+import Experience from '../../components/main-page/Experience.astro';
 import { ui } from '../../i18n/ui';
 
 export const getStaticPaths = async () => {
@@ -10,109 +13,12 @@ export const getStaticPaths = async () => {
     params: { lang }
   }));
 };
-
-const { lang } = Astro.params;
-const t = useTranslations(lang as "cs" | "en");
 ---
 
 <Layout>
-  <div id="home">
-    <h1>Václav Parma</h1>
-    <h2>{t('home.subtitle')}</h2>
-  </div>
+  <ScrollArrow />
 
-  <div class="section" id="about">
-    <div class="section-heading"><h3>{t('about.title')}</h3></div>
-    <p>{t('about.1.0')}<span id="age">-years-</span>{t('about.1.1')}</p>
-    <p>{t('about.2')}</p>
-    <p>{t('about.3')}</p>
-  </div>
-
-  <div class="section" id="experience">
-    <div class="section-heading"><h3>{t('experience.title')}</h3></div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid explicabo expedita, rem animi quidem iure aperiam eaque molestiae numquam, alias ipsum beatae modi nesciunt ea dolor molestias doloribus at nam.</p>
-  </div>
+  <Home />
+  <About />
+  <Experience />
 </Layout>
-
-<style>
-  .section {
-    width: 50%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .section-heading {
-    width: 100%;
-    text-align: center;
-    border-bottom: 3px solid var(--primary);
-    margin-bottom: 32px;
-  }
-
-  .section-heading h2 {
-    margin-bottom: 8px;
-  }
-
-  #home {
-    height: 100vh;
-    width: 50%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #about {
-    margin-top: 50vh;
-    scroll-margin-top: 20vh;
-  }
-
-  #about p {
-    margin-bottom: 28px;
-  }
-
-  #age {
-    font-family: "Roboto", monospace;
-  }
-
-  #experience {
-    margin-top: 90vh;
-    scroll-margin-top: 20vh;
-  }
-</style>
-
-<script lang="js">
-  document.addEventListener("DOMContentLoaded", function () {
-    window.addEventListener("scroll", function () {
-      const scrollArrow = document.getElementById("scroll-arrow");
-      const scrollPosition = window.scrollY;
-      const windowHeight = window.innerHeight;
-
-      if (scrollPosition > windowHeight * 0.05) {
-        scrollArrow.style.opacity = 0;
-      }
-    });
-
-    setInterval(() => {
-      const date_fix = 0.002819741;
-      const startDate = new Date("2006/02/08");
-      const diffDate = new Date(new Date() - startDate);
-      my_age =
-        diffDate.toISOString().slice(0, 4) -
-        1970 +
-        diffDate.getMonth() / 12 +
-        (diffDate.getDate() - 1) / 365.25 +
-        diffDate.getHours() / 8760 +
-        diffDate.getMinutes() / 525600 +
-        diffDate.getSeconds() / 31536000 +
-        diffDate.getMilliseconds() / 31536000000;
-      my_age = Math.round((my_age - date_fix) * 10000000000) / 10000000000;
-      my_age = my_age.toFixed(10);
-      const element = document.getElementById("age");
-      element.textContent = my_age;
-    }, 100);
-  });
-</script>

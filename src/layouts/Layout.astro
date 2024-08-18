@@ -1,9 +1,9 @@
 ---
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import StarsBackground from '../components/StarsBackground.astro';
 import Sidebar from '../components/Sidebar.astro';
-import ScrollArrow from '../components/ScrollArrow.astro';
-import Footer from '../components/Footer.astro';
 import LanguagePicker from '../components/LanguagePicker.astro';
+import Footer from '../components/Footer.astro';
 
 import '../global.css';
 
@@ -28,20 +28,34 @@ const t = useTranslations(lang);
       content={t('description')} />
     <meta name="author" content="Václav Parma" />
     <meta name="keywords" content={t('keywords')} />
-
-    <link rel="stylesheet" href="/stars/stars.css" />
   </head>
   <body>
-    <div id="stars-container">
-      <div id="small-stars-wrapper"></div>
-      <div id="medium-stars-wrapper"></div>
-      <div id="large-stars-wrapper"></div>
-      <script is:inline src="/stars/stars.js"></script>
-    </div>
-    <ScrollArrow />
+    <StarsBackground />
     <Sidebar />
     <LanguagePicker />
     <slot />
     <Footer />
   </body>
 </html>
+
+<style is:global>
+  .section {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-heading {
+    width: 100%;
+    text-align: center;
+    border-bottom: 3px solid var(--primary);
+    margin-bottom: 32px;
+  }
+
+  .section-heading h2 {
+    margin-bottom: 8px;
+  }
+</style>
