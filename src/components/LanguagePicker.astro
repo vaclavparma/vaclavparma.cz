@@ -101,8 +101,8 @@ import { languages } from '../i18n/ui';
         picker.classList.add('focused');
       });
 
-      link.addEventListener('blur', (event) => {
-        const relatedTarget = event.relatedTarget;
+      link.addEventListener('blur', (event: FocusEvent) => {
+        const relatedTarget = event.relatedTarget as Node;
         if (!picker.contains(relatedTarget)) {
           picker.classList.remove('focused');
         }
