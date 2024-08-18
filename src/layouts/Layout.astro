@@ -1,0 +1,39 @@
+---
+import Sidebar from '../components/Sidebar.astro';
+import ScrollArrow from '../components/ScrollArrow.astro';
+import Footer from '../components/Footer.astro';
+
+import '../global.css';
+---
+
+<html lang="en">
+	<head>    
+    <title>Václav Parma</title>
+    
+		<meta charset="utf-8">
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta
+      name="viewport"
+      content="height=device-height, width=device-width, initial-scale=1.0, target-densitydpi=device-dpi" />
+    <meta name="theme-color" content="#121212" />
+    <meta
+      name="description"
+      content="Ahoj, jsem student, programátor a maker z České republiky. Své znalosti programování a elektroniky jsem se naučil převážně metodou pokus-omyl." />
+    <meta name="author" content="Václav Parma" />
+    <meta name="keywords" content="Václav Parma, Student, Programátor, Maker" />
+
+    <link rel="stylesheet" href="/stars/stars.css" />
+  </head>
+  <body>
+    <div id="stars-container">
+      <div id="small-stars-wrapper"></div>
+      <div id="medium-stars-wrapper"></div>
+      <div id="large-stars-wrapper"></div>
+      <script is:inline src="/stars/stars.js"></script>
+    </div>
+    <ScrollArrow />
+    <Sidebar />
+    <slot />
+    <Footer />
+  </body>
+</html>
