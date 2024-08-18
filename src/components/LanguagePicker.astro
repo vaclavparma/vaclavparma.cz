@@ -52,7 +52,7 @@ import { languages } from '../i18n/ui';
     z-index: -1;
     bottom: 0;
     left: 0;
-    padding: 2px 8px 2px 28px;
+    padding: 3px 8px 3px 14px;
     background-color: var(--secondary);
     opacity: 0;
     pointer-events: none;
@@ -63,6 +63,12 @@ import { languages } from '../i18n/ui';
   #language-dropdown {
     margin: 0;
     list-style: none;
+  }
+
+  #language-picker:hover #language-button,
+  #language-picker.focused #language-button {
+    padding: 0;
+    margin: 12px;
   }
 
   #language-picker:hover #language-dropdown-parent,
@@ -85,9 +91,10 @@ import { languages } from '../i18n/ui';
     transition: 0.3s ease;
   }
 
-  .language-link:hover {
+  .language-link:hover, .language-link:focus-within {
     background-color: var(--primary);
     box-shadow: 0 0 8px var(--primary), 0 0 16px var(--primary);
+    outline: none;
   }
 </style>
 

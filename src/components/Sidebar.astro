@@ -81,10 +81,11 @@ const t = useTranslations(lang);
     fill: white;
   }
 
-  #sidebar a:hover {
+  #sidebar a:hover, #sidebar a:focus-within {
     background-color: var(--primary);
     box-shadow: 0 0 8px var(--primary), 0 0 16px var(--primary);
     padding-left: 6px;
     transform: translateX(2px);
+    outline: none;
   }
 </style>
