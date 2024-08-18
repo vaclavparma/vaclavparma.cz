@@ -29,18 +29,18 @@ h1 {
 }
 
 h2 {
-  font-size: 64px;
-  font-weight: 300;
-  letter-spacing: 2px;
-  color: var(--heading);
-  margin: 0;
-}
-
-h3 {
   font-size: 32px;
   font-weight: 300;
   letter-spacing: 1px;
   color: var(--sub-heading);
+  margin: 0;
+}
+
+h3 {
+  font-size: 64px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: var(--heading);
   margin: 0;
 }
 
