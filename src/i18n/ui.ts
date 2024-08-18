@@ -7,6 +7,9 @@ export const defaultLang = "cs";
 
 export const ui = {
   cs: {
+    description:
+      "Ahoj, jsem student, programátor a maker z České republiky. Své znalosti programování a elektroniky jsem se naučil převážně metodou pokus-omyl.",
+    keywords: "Václav Parma, Student, Programátor, Maker",
     "nav.label.home": "Sekce domů",
     "nav.label.about": "Sekce o mně",
     "nav.label.experience": "Sekce zkušenosti",
@@ -25,6 +28,9 @@ export const ui = {
     "experience.title": "Zkušenosti",
   },
   en: {
+    description:
+      "Hello, I am a student, programmer and maker from Czech Republic. I learned my knowledge of programming and electronics mostly by trial and error.",
+    keywords: "Václav Parma, Student, Programmer, Maker",
     "nav.label.home": "Home section of the page",
     "nav.label.about": "About section of the page",
     "nav.label.experience": "Work section of the page",

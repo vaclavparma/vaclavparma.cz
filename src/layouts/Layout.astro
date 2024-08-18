@@ -1,5 +1,5 @@
 ---
-import { getLangFromUrl } from '../i18n/utils';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import Sidebar from '../components/Sidebar.astro';
 import ScrollArrow from '../components/ScrollArrow.astro';
 import Footer from '../components/Footer.astro';
@@ -8,6 +8,7 @@ import LanguagePicker from '../components/LanguagePicker.astro';
 import '../global.css';
 
 const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <html lang={lang}>
@@ -24,9 +25,9 @@ const lang = getLangFromUrl(Astro.url);
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <meta
       name="description"
-      content="Ahoj, jsem student, programátor a maker z České republiky. Své znalosti programování a elektroniky jsem se naučil převážně metodou pokus-omyl." />
+      content={t('description')} />
     <meta name="author" content="Václav Parma" />
-    <meta name="keywords" content="Václav Parma, Student, Programátor, Maker" />
+    <meta name="keywords" content={t('keywords')} />
 
     <link rel="stylesheet" href="/stars/stars.css" />
   </head>
