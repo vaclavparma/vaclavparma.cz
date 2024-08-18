@@ -1,17 +1,22 @@
 ---
+import { getLangFromUrl } from '../i18n/utils';
 import Sidebar from '../components/Sidebar.astro';
 import ScrollArrow from '../components/ScrollArrow.astro';
 import Footer from '../components/Footer.astro';
+import LanguagePicker from '../components/LanguagePicker.astro';
 
 import '../global.css';
+
+const lang = getLangFromUrl(Astro.url);
 ---
 
-<html lang="en">
+<html lang={lang}>
 	<head>    
     <title>Václav Parma</title>
     
 		<meta charset="utf-8">
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="canonical" href="https://vaclavparma.cz"/>
     <meta
       name="viewport"
       content="height=device-height, width=device-width, initial-scale=1.0, target-densitydpi=device-dpi" />
@@ -33,6 +38,7 @@ import '../global.css';
     </div>
     <ScrollArrow />
     <Sidebar />
+    <LanguagePicker />
     <slot />
     <Footer />
   </body>
