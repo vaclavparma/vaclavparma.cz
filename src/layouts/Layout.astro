@@ -2,7 +2,6 @@
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import StarsBackground from '../components/StarsBackground.astro';
 import Sidebar from '../components/Sidebar.astro';
-import LanguagePicker from '../components/LanguagePicker.astro';
 import Footer from '../components/Footer.astro';
 
 import '../global.css';
@@ -32,7 +31,6 @@ const t = useTranslations(lang);
   <body>
     <StarsBackground />
     <Sidebar />
-    <LanguagePicker />
     <slot />
     <Footer />
   </body>
@@ -57,5 +55,11 @@ const t = useTranslations(lang);
 
   .section-heading h2 {
     margin-bottom: 8px;
+  }
+
+  @media (max-width: 768px) {
+    .section {
+      width: 75%;
+    }
   }
 </style>
