@@ -160,4 +160,34 @@ const t = useTranslations(lang);
       background-color: var(--secondary);
       width: 50px;
   }
+
+  @media (max-width: 768px) {
+    .timeline-items::before {
+        left: calc(10% - 1px);
+    }
+
+    .timeline-item:nth-child(odd) {
+        padding-right: 10%;
+        padding-left: calc(10% + 30px);
+        text-align: left;
+    }
+
+    .timeline-item:nth-child(even) {
+        padding-right: 10%;
+        padding-left: calc(10% + 30px);
+    }
+
+    .timeline-content p {
+        font-size: 14px;
+    
+    }
+    
+    .timeline-content h3 {
+        font-size: 18px;
+    }
+
+    .timeline-dot {
+        left: calc(10%);
+    }
+  }
 </style>
