@@ -1,0 +1,29 @@
+---
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div id="home">
+  <h1>Václav Parma</h1>
+  <h2>{t('home.subtitle')}</h2>
+</div>
+
+<style>
+  #home {
+    height: 100vh;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    #home {
+      width: 80%;
+    }
+  }
+</style>

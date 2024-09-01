@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ScrollArrow from '../../components/ScrollArrow.astro';
+import Home from '../../components/main-page/Home.astro';
+import About from '../../components/main-page/About.astro';
+import Experience from '../../components/main-page/Experience.astro';
+import { ui } from '../../i18n/ui';
+
+export const getStaticPaths = async () => {
+  const langs = Object.keys(ui);
+
+  return langs.map((lang) => ({
+    params: { lang }
+  }));
+};
+---
+
+<Layout>
+  <ScrollArrow />
+  <Home />
+  <About />
+  <Experience />
+</Layout>

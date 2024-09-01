@@ -1,0 +1,66 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import StarsBackground from '../components/StarsBackground.astro';
+import Sidebar from '../components/Sidebar.astro';
+import Footer from '../components/Footer.astro';
+
+import '../global.css';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<html lang={lang}>
+	<head>    
+    <title>Václav Parma</title>
+    
+		<meta charset="utf-8">
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="canonical" href="https://vaclavparma.cz"/>
+    <meta
+      name="viewport"
+      content="height=device-height, width=device-width, initial-scale=1.0, target-densitydpi=device-dpi" />
+    <meta name="theme-color" content="#121212" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <meta
+      name="description"
+      content={t('description')} />
+    <meta name="author" content="Václav Parma" />
+    <meta name="keywords" content={t('keywords')} />
+  </head>
+  <body>
+    <StarsBackground />
+    <Sidebar />
+    <slot />
+    <Footer />
+  </body>
+</html>
+
+<style is:global>
+  .section {
+    width: 50%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-heading {
+    width: 100%;
+    text-align: center;
+    border-bottom: 3px solid var(--primary);
+    margin-bottom: 32px;
+  }
+
+  .section-heading h2 {
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: 768px) {
+    .section {
+      width: 75%;
+    }
+  }
+</style>

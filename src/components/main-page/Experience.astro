@@ -1,0 +1,193 @@
+---
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section id="experience" class="section">
+  <div class="section-heading"><h3>{t('experience.title')}</h3></div>
+  <div class="timeline-items">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2017</div>
+      <div class="timeline-content">
+        <h3>{t('experience.1.title')}</h3>
+        <p>{t('experience.1.description')}</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2019</div>
+      <div class="timeline-content">
+        <h3>{t('experience.2.title')}</h3>
+        <p>{t('experience.2.description')}</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2023</div>
+      <div class="timeline-content">
+        <h3>{t('experience.3.title')}</h3>
+        <p>{t('experience.3.description')}</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2024</div>
+      <div class="timeline-content">
+        <h3>{t('experience.4.title')}</h3>
+        <p>{t('experience.4.description')}</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2024</div>
+      <div class="timeline-content">
+        <h3>{t('experience.5.title')}</h3>
+        <p>{t('experience.5.description')}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #experience {
+    margin-top: 90vh;
+    scroll-margin-top: 20vh;
+  }
+
+  .timeline-items {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .timeline-items::before {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 100%;
+      background-color: var(--timeline);
+      left: calc(50% - 1px);
+  }
+
+  .timeline-item {
+      margin-bottom: 40px;
+      width: 100%;
+      position: relative;
+  }
+
+  .timeline-item:last-child {
+      margin-bottom: 0;
+  }
+
+  .timeline-item:nth-child(odd) {
+      padding-right: calc(50% + 30px);
+      text-align: right;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content p {
+      text-align: right;
+  }
+
+  .timeline-item:nth-child(even) {
+      padding-left: calc(50% + 30px);
+  }
+
+  .timeline-item:nth-child(even) .timeline-content p {
+      text-align: left;
+  }
+
+  .timeline-dot {
+      height: 20px;
+      width: 20px;
+      background-color: var(--timeline);
+      position: absolute;
+      left: 50%;
+      border-radius: 50%;
+      top: 10px;
+      transform: translateX(-9px);
+  }
+
+  .timeline-date {
+      font-size: 20px;
+      font-weight: 800;
+      color: white;
+      margin: 6px 0 15px;
+  }
+
+  .timeline-content {
+      background-color: rgba(0, 0, 0, 0.25);
+      border: 3px solid var(--timeline);
+      padding: 30px 50px;
+      border-radius: 4rem;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+  }
+
+  .timeline-content p {
+      color: white;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 24px;
+
+  }
+
+  .timeline-content h3 {
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      margin: 0 0 10px;
+  }
+
+  .timeline-content:hover {
+      transform: scale(1.025);
+      box-shadow: 0 0 25px var(--primary);
+  }
+
+  ::-webkit-scrollbar {
+      width: 15px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background-color: var(--primary);
+  }
+
+  ::-webkit-scrollbar-track {
+      background-color: var(--secondary);
+      width: 50px;
+  }
+
+  @media (max-width: 768px) {
+    .timeline-items::before {
+        left: calc(10% - 1px);
+    }
+
+    .timeline-item:nth-child(odd) {
+        padding-right: 10%;
+        padding-left: calc(10% + 30px);
+        text-align: left;
+    }
+
+    .timeline-item:nth-child(even) {
+        padding-right: 10%;
+        padding-left: calc(10% + 30px);
+    }
+
+    .timeline-content p {
+        font-size: 14px;
+    
+    }
+    
+    .timeline-content h3 {
+        font-size: 18px;
+    }
+
+    .timeline-dot {
+        left: calc(10%);
+    }
+  }
+</style>
