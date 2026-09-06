@@ -1,34 +1,28 @@
 ---
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import StarsBackground from '../components/StarsBackground.astro';
-import ScrollArrow from '../components/ScrollArrow.astro';
-import LanguagePicker from '../components/LanguagePicker.astro';
-import Footer from '../components/Footer.astro';
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
 ---
 
-
-<html lang={lang}>
-	<head> 
+<html lang="en">
+	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, target-densitydpi=device-dpi" />
 		<link rel="icon" href="/favicon.png" />
 		<title>Václav Parma</title>
-    <meta name="description" content={t('description')} />
-    <meta name="author" content="Václav Parma" />
-    <meta name="keywords" content={t('keywords')} />
-  </head>
-  <body>
-    <StarsBackground />
-		<ScrollArrow />
-		<LanguagePicker />
-    <main>
-      <slot />
-    </main>
-		<Footer />
-  </body>
+		<meta name="description" content="Václav Parma — student, programmer and maker from Czech Republic." />
+		<meta name="author" content="Václav Parma" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Space+Mono:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<StarsBackground />
+		<main>
+			<slot />
+		</main>
+	</body>
 </html>
 
 <style is:global>
@@ -43,7 +37,6 @@ const t = useTranslations(lang);
 		color: #e0e0e0;
 		overflow-x: hidden;
 		touch-action: manipulation;
-		scroll-behavior: smooth;
 		overscroll-behavior-y: none;
 	}
 
@@ -62,7 +55,6 @@ const t = useTranslations(lang);
 	main {
 		flex: 1;
 	}
-
 
 	::selection {
 		background: #7871aa;

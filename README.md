@@ -2,7 +2,7 @@
 
 Source code for my personal website — [vaclavparma.cz](https://vaclavparma.cz).
 
-Built with [Astro](https://astro.build/). Bilingual (Czech / English).
+Built with [Astro](https://astro.build/). English-only, with the CV also available in Czech.
 
 ## Requirements
 
@@ -29,12 +29,13 @@ The site runs at `http://localhost:4321`.
 ## Project structure
 
 ```
-public/          # Static assets
+public/          # Static assets, incl. CV PDFs under cv/en/ and cv/cs/
 src/
   components/    # Astro components
-  i18n/          # Translations and helpers
   layouts/       # Page layouts
-  pages/         # Routes (cs default, en under /en)
+  lib/           # Shared helpers (e.g. latest CV lookup)
+  pages/         # Routes: / (landing), /cv (alias for /cv/en),
+                 # /cv/en, /cv/cs (redirect to latest CV PDF)
 ```
 
 ## License

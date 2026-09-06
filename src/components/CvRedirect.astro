@@ -1,0 +1,20 @@
+---
+import { getLatestCvUrl, type CvLang } from '../lib/cv';
+
+interface Props {
+  lang: CvLang;
+}
+
+const { lang } = Astro.props;
+const url = getLatestCvUrl(lang);
+---
+
+<html>
+  <head>
+    <meta http-equiv="refresh" content={`0; url=${url}`} />
+    <link rel="canonical" href={url} />
+  </head>
+  <body>
+    <script set:html={`window.location.replace(${JSON.stringify(url)});`}></script>
+  </body>
+</html>
