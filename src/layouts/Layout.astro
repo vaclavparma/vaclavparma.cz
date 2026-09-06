@@ -1,5 +1,6 @@
 ---
 import StarsBackground from '../components/StarsBackground.astro';
+import Paper from '../components/Paper.astro';
 ---
 
 <html lang="en">
@@ -20,7 +21,9 @@ import StarsBackground from '../components/StarsBackground.astro';
 	<body>
 		<StarsBackground />
 		<main>
-			<slot />
+			<Paper>
+				<slot />
+			</Paper>
 		</main>
 	</body>
 </html>
