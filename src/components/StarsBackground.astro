@@ -49,63 +49,41 @@
 </style>
 
 <script lang="js">
-  let animationRunning = true;
   let lastScrollPosition = 0;
 
-  const getWrapper = (id) => document.getElementById(id);
-  const getComputedTop = (element) => parseFloat(getComputedStyle(element).top) || 0;
+  const STAR_TIERS = [
+    { key: "small", maxSize: 1, parallax: 0.05 },
+    { key: "medium", maxSize: 2, parallax: 0.1 },
+    { key: "large", maxSize: Infinity, parallax: 0.2 },
+  ];
 
-  const starWrappers = {
-    small: getWrapper("small-stars-wrapper"),
-    medium: getWrapper("medium-stars-wrapper"),
-    large: getWrapper("large-stars-wrapper"),
-  };
+  const starWrappers = Object.fromEntries(
+    STAR_TIERS.map((tier) => [tier.key, document.getElementById(`${tier.key}-stars-wrapper`)])
+  );
 
-  function createStar(size, posX, posY) {
+  function createStar(tier, posX, posY) {
     const star = document.createElement("div");
 
-    star.classList.add("star");
+    star.classList.add("star", `${tier.key}-star`);
     star.style.left = `${posX}vw`;
     star.style.top = `${posY}px`;
-
-    if (size < 1) star.classList.add("small-star");
-    else if (size < 2) star.classList.add("medium-star");
-    else star.classList.add("large-star");
     return star;
   }
 
   function generateStars() {
     const starCount = Math.round((document.body.clientWidth * document.body.scrollHeight) ** 0.5 / 2.25);
-    const fragments = {
-      small: document.createDocumentFragment(),
-      medium: document.createDocumentFragment(),
-      large: document.createDocumentFragment(),
-    };
+    const fragments = Object.fromEntries(STAR_TIERS.map((tier) => [tier.key, document.createDocumentFragment()]));
 
     for (let i = 0; i < starCount; i++) {
       const size = Math.random() * 3;
       const posX = Math.random() * 100;
       const posY = Math.random() * document.body.scrollHeight;
+      const tier = STAR_TIERS.find((t) => size < t.maxSize);
 
-      const star = createStar(size, posX, posY);
-      if (size < 1) fragments.small.appendChild(star);
-      else if (size < 2) fragments.medium.appendChild(star);
-      else fragments.large.appendChild(star);
+      fragments[tier.key].appendChild(createStar(tier, posX, posY));
     }
 
-    starWrappers.small.appendChild(fragments.small);
-    starWrappers.medium.appendChild(fragments.medium);
-    starWrappers.large.appendChild(fragments.large);
-  }
-
-  function moveStars() {
-    ["small", "medium", "large"].forEach((size, index) => {
-      let top = getComputedTop(starWrappers[size]);
-      top -= 0.05 * (index + 1);
-      if (top < -document.body.scrollHeight) top = document.body.scrollHeight;
-      starWrappers[size].style.top = `${top}px`;
-    });
-    if (animationRunning) requestAnimationFrame(moveStars);
+    STAR_TIERS.forEach((tier) => starWrappers[tier.key].appendChild(fragments[tier.key]));
   }
 
   function handleScroll() {
@@ -114,20 +92,13 @@
     if (Math.abs(scrollPosition - lastScrollPosition) < window.innerHeight / 25) return;
     lastScrollPosition = scrollPosition;
 
-    starWrappers.small.style.transform = `translateY(${-scrollPosition * 0.05}px)`;
-    starWrappers.medium.style.transform = `translateY(${-scrollPosition * 0.1}px)`;
-    starWrappers.large.style.transform = `translateY(${-scrollPosition * 0.2}px)`;
-  }
-
-  function toggleAnimations(state) {
-    animationRunning = state;
-    if (state) requestAnimationFrame(moveStars);
+    STAR_TIERS.forEach((tier) => {
+      starWrappers[tier.key].style.transform = `translateY(${-scrollPosition * tier.parallax}px)`;
+    });
   }
 
   window.onload = function () {
     generateStars();
-    toggleAnimations(true);
     window.addEventListener("scroll", handleScroll, { passive: true });
-    document.addEventListener("visibilitychange", () => toggleAnimations(!document.hidden));
   };
 </script>
