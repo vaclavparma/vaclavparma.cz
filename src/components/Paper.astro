@@ -20,15 +20,59 @@
 
   #paper-dots {
     position: absolute;
-    inset: 32px 32px 0 32px;
+    inset: 25px 32px 0 32px;
     background-image: radial-gradient(circle, rgba(0, 0, 0, 0.22) 1.4px, transparent 1.4px);
     background-size: 26px 26px;
     pointer-events: none;
   }
 
   #paper-content {
-    inset: 18px 44px;
+    padding: 38px 44px;
     position: relative;
     color: #1a1a1a;
+  }
+
+  #paper-content :global(h1) {
+    font-family: "Caveat", cursive;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 52px;
+    margin: 0 0 26px;
+  }
+
+  #paper-content :global(h2) {
+    font-family: "Caveat", cursive;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32px;
+    margin: 20px 0 0;
+  }
+
+  #paper-content :global(h3) {
+    font-family: "Caveat", cursive;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+    margin: 28px 0 0;
+  }
+
+  #paper-content :global(p) {
+    font-family: "Caveat", cursive;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0;
+  }
+
+  #paper-content :global(a) {
+    color: #2c4a6e;
+    font-family: "Caveat", cursive;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0;
+  }
+
+  #paper-content :global(a:hover) {
+    text-decoration: underline;
+    cursor: pointer;
   }
 </style>
